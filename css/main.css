@@ -1,0 +1,180 @@
+/***************************
+SPACING
+***************************/
+
+* {
+  box-sizing: border-box;
+}
+
+#wrapper {
+  max-width: 1400px;
+  padding-top: 2%;
+  padding-right: 8%;
+  padding-bottom: 0%;
+  padding-left: 9%;
+}
+
+.sidea {
+  width: 20%;
+  float: left;
+  padding: 0;
+}
+
+.sideb {
+  width: 80%;
+  float: left;
+}
+
+@media screen and (max-width: 1000px) {
+
+  #wrapper {
+    padding: 2%;
+  }
+
+  .sidea {
+    width: 100%;
+  }
+
+  .sideb {
+    width: 100%;
+  }
+}
+
+/***************************
+BACKGROUND & Fonts
+***************************/
+
+body {
+  background: #FFFFFF;
+  color: #000000;
+  font-size: 1.3em;
+  line-height: 1.5em;
+  font-family: 'Alegreya Sans', sans-serif; 
+}
+
+#textlogo {
+  font-size: 1.8em;
+  line-height: 1.5em;
+  color: #000000;
+  padding-right: 10%;
+  padding-left: 25%;
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing:-.02em;
+  font-family: 'Playfair Display', serif; 
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+  padding-left: -2%;
+  font-size: 0.95em;
+}
+
+a {
+  transition: 0.1s;
+  border-bottom:4px solid #BBEE66;
+  text-decoration:none;
+  color: #000000;
+}
+
+.sidea {
+
+    padding-right: 15%;
+}
+
+.sideb {
+    border-left:  1px solid #000000;
+  padding-top: 5%;
+  padding-left:5%;
+}
+
+#aboutme {
+  border: 1px solid #000000;
+  padding-left: 3%;
+  padding-right: 3%;
+  margin-left: 5%;
+  margin-right: 5%;
+  font-size: 0.9em;
+  line-height: 1.4em;
+  font-family: 'Alegreya Sans', sans-serif; 
+}
+
+#portfolio {
+  padding-top: 2%;
+}
+
+#contact {
+  font-size: 0.9em;
+}
+
+#title {
+  font-weight: 900;
+  font-family: 'Alegreya Sans', sans-serif; 
+}
+
+/***************************
+LINKS
+***************************/
+
+/* mouse over link */
+a:hover {
+  background-image: linear-gradient(to right,pink, #BBEE66);
+}
+
+a:selected {
+  color: #fff;
+  background-color: #000000;
+}
+
+/***************************
+ACCORDION
+***************************/
+
+.accordion {
+  padding-left: 1%;
+  font-size: 1em;
+  background-color: #FFFFFF;
+  color: #000000;
+  text-transform:uppercase;letter-spacing:.025em;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.1s;
+}
+
+h4{
+  font-weight: 300;
+  text-transform:uppercase;letter-spacing:.025em;
+}
+
+.accordion:before{content:"+" }
+.active:before{content:"–" }
+
+.accordion:hover {
+background-image: linear-gradient(to right,pink, #BBEE66);
+}
+
+.active {
+}
+
+.panel {
+    border: 1px solid #000000;
+    padding-left: 3%;
+    padding-right: 3%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 0.9em;
+    line-height: 1.4em;
+    /* display: none;
+    overflow: hidden; */
+}
+
+#description {
+  max-width: 100%;
+}
