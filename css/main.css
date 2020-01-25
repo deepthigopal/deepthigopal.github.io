@@ -38,7 +38,13 @@ SPACING
 
   .sideb {
     width: 100%;
-    border-style: hidden;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+
+  .sideb {
+  border-left: 1px solid #000000;
   }
 }
 
@@ -84,7 +90,6 @@ li {
 }
 
 .sideb {
-  border-left: 1px solid #000000;
   padding-top: 5%;
   padding-left:5%;
 }
