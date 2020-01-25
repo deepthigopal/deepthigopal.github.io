@@ -113,7 +113,7 @@ mark {
 }
 
 
-#portfolio {
+#cv {
   padding-top: 2%;
 }
 
@@ -140,6 +140,7 @@ a {
 
 a:hover {
   background-image: linear-gradient(to right,pink, #BBEE66);}
+
 /***************************
 ACCORDION
 ***************************/
@@ -155,8 +156,8 @@ ACCORDION
   outline: none;
 }
 
-.accordion:before{content:"+" }
-.active:before{content:"–" }
+.accordion:before{content:'+' }
+.active:before{content:'–' }
 
 .accordion:hover {
 background-image: linear-gradient(to right,pink, #BBEE66);
@@ -181,6 +182,70 @@ background-image: linear-gradient(to right,pink, #BBEE66);
     overflow: hidden;
     text-align: justify;
 }
+
+/***************************
+talks and publications
+***************************/
+
+.panel time {
+font-family: 'Founders Grotesk Web', 'Helvetica', -apple-system, 'Arial', sans-serif;
+font-weight: 500;
+font-size: 0.6em;
+letter-spacing: 0.1em;
+line-height: 0.9em;
+text-transform:uppercase;
+padding-right: 1%;
+}
+
+.panel a {
+border-bottom: 2px solid #BBEE66;
+}
+
+.presentation {
+  display: grid;
+  grid-template-columns: 21% 70% 9%;
+}
+
+
+#talktitle{
+  margin-top:1.5%;
+  font-size: 0.8em;
+  font-style: italic;
+  line-height: 1em;
+  margin-bottom: -0.5%;
+}
+
+#authors{
+  font-size: 0.6em;
+  text-transform:uppercase;
+  left: 0px;
+  margin-bottom: -2%;
+}
+
+#conference{
+    font-size: 0.7em;
+    left: 0px;
+    margin-bottom: 2%;
+}
+
+#talk:before{
+margin-left: 5%;
+content:'talk';
+font-family: 'Founders Grotesk Web', 'Helvetica', -apple-system, 'Arial', sans-serif;
+font-size: 0.6em;
+letter-spacing: 0.1em;
+text-transform:uppercase;
+background:pink;
+}
+
+#poster:before{
+margin-left: 3%;
+content:'poster';
+font-family: 'Founders Grotesk Web', 'Helvetica', -apple-system, 'Arial', sans-serif;
+font-size: 10px;
+letter-spacing: 1px;
+text-transform:uppercase;
+background:#BBEE66;}
 
 #description {
   max-width: 100%;
