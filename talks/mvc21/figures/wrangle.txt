@@ -1,0 +1,23 @@
+(data$longitude > -0.630147)&(data$longitude < 0.402567) & (data$latitude > 51.269319) & (data$latitude < 51.722449)
+
+
+(data$longitude > -2.330147)&(data$latitude > 52.269319) & (data$longitude < -1.302567) & (data$latitude < 52.722449)
+
+(data$longitude > -3.230147)&(data$latitude > 53.169319) & (data$longitude < -2.202567) & (data$latitude < 53.622449)
+
+
+,,,
+
+
+
+data['london_distance'] = data.apply(lambda x: haversine(51.5074,-0.1278,x.latitude,x.longitude),axis=1)
+data['birmingham_distance'] = data.apply(lambda x: haversine(52.4862,-1.8904,x.latitude,x.longitude),axis=1)
+data['liverpool_distance'] = data.apply(lambda x: haversine(53.4084,-2.9916,x.latitude,x.longitude),axis=1)
+data['manchester_distance'] = data.apply(lambda x: haversine(53.4808,-2.2426,x.latitude,x.longitude),axis=1)
+data['plymouth_distance'] = data.apply(lambda x: haversine(50.3755,-4.1427,x.latitude,x.longitude),axis=1)
+data['glasgow_distance'] = data.apply(lambda x: haversine(55.8642,-4.2518,x.latitude,x.longitude),axis=1)
+data['dublin_distance'] = data.apply(lambda x: haversine(53.3498,-6.2603,x.latitude,x.longitude),axis=1)
+
+nu = data[['london_distance','birmingham_distance','liverpool_distance','manchester_distance','plymouth_distance','glasgow_distance','dublin_distance']]
+data['nearest_area'] = nu.idxmin(axis=1).apply(lambda x: x[:-9])
+data.to_csv('prep_drop_binned.csv',index=False)

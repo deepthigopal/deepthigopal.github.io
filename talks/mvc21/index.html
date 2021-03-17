@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Insights from the Tweetolectology project</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/sunblind.css" id="theme">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section>
+          <h1>Insights from the <mark><b>Tweetolectology</b></mark> project</h1>
+<p>David Willis (Oxford) • <a>david.willis@ling-phil.ox.ac.uk</a><br/>
+Adrian Leemann (Oxford) • <a>adrian.leemann@csls.unibe.ch</a><br/>
+Tamsin Blaxter (Cambridge) • <a>ttb26@cam.ac.uk</a><br/>
+Deepthi Gopal (Cambridge) • <a>dg537@cam.ac.uk</a></p>
+
+<div class='title-footer'><hr><div style="text-align:right;"><a href="https://esrc.ukri.org/"><img style="height:40px;vertical-align: bottom;padding-right: 1.5em;" src="./figures/esrc.png" /></a><a href="https://www.cam.ac.uk"><img style="height:40px;vertical-align: bottom; padding-right: 1.5em;" src="./figures/cam.png" /></a><a href="https://www.ox.ac.uk"><img style="height:40px;vertical-align: bottom; padding-right: 1.5em;" src="./figures/ox.gif" /></a><a href="https://www.csls.unibe.ch/index_eng.html"><img style="height:40px;vertical-align: bottom;" src="./figures/bern.png" /></a></div></div>
+        </section>
+
+        <section>
+ <h3>About the project</h3>
+        <ul>
+    <li>ESRC project ‘Investigating the diffusion of morphosyntactic innovations using social media’, September 2017—January 2021.</li>
+<ul class='fragment'><li>David Willis (PI, Oxford)</li><li>Adrian Leemann (CI, Bern)</li><li>Tam Blaxter (CI, Cambridge)</li><li>Deepthi Gopal (RA, Cambridge)</li><li>Jonathan Mackenzie (IT, Cambridge).</li></ul>
+<li class='fragment'>Geospatial patterns of morphosyntactic variation in Twitter corpora for <defs>British English, Welsh, Norwegian/mainland Scandinavian</defs>; also <defs>Turkish, Icelandic, Slovene, Haitian Creole</defs>.</li>
+    <ul><li class='fragment'>Much, although not all existing work using large-scale social-media data: frequent, often lexical patterns; very large languages, like American English; very large geographical scales (North America, 'the world').<small>(Eisenstein et al. 2014; Russ 2012; Doyle 2014; Bamman et al. 2014; Gonçalves & Sánchez 2014; Grieve et al. 2013; Grieve et al. 2017; Grieve et al. 2018; Grieve et al. 2019)</small> </li>
+<li class='fragment'>Our general aim: smaller languages, finely-grained geographical patterning, extension to apparent time.</li>
+<li class='fragment'><defs>Focus for today's talk:</defs><ul><li> patterns in the British English corpus, and filling in geographical gaps in our understanding of recent innovations.</li></ul> </li>
+    </ul></ul>
+</section>
+
+<section>
+ <h3>The corpus</h3>
+
+        <ul>
+    <li>The British English corpus in all: <defs>6,121,716</defs> unique users responsible for <defs>546,398,943</defs> tweets. </li>
+    <ul><li>Tweets have <defs>two sources</defs>: one is the Twitter 'streaming' API, which allows us to download all tweets Twitter-geotagged within a geographical bounding box around the UK and Northern Ireland. This kind of geotagging is opt-in, so biased; we also downloaded data corresponding to posts by <i>users mentioned by the users in the streaming data</i>, accounting for some representation of Tweets posted before the start of data collection.</li></ul>
+<div><center><img src='figures/corpus_overall.png'><br><small>Figure: Number of Tweets in the full British English corpus by date of original posting.</small></center></div></ul>
+</section>
+
+<section>
+ <h3>The corpus</h3>
+
+        <ul>
+    <li>The British English corpus in all: <defs>6,121,716</defs> unique users responsible for <defs>546,398,943</defs> tweets. </li>
+    <ul><li>Tweets have <defs>two sources</defs>: one is the Twitter 'streaming' API, which allows us to download all tweets Twitter-geotagged within a geographical bounding box around the UK and Northern Ireland. This kind of geotagging is opt-in, so biased; we also downloaded data corresponding to posts by <i>users mentioned by the users in the streaming data</i>, accounting for some representation of Tweets posted before the start of data collection.</li></ul>
+<div><center><img src='figures/data_source.png'><br><small>Figure: Number of Tweets by date, divided by source of data (directly streamed, or scraped from the profile of a user mentioned in the original stream).</small></center></div></ul>
+</section>
+
+<section>
+ <h3>The corpus</h3>
+
+        <ul>
+    <li>Slightly over 6 million users and a mean of ~89 tweets per user; but some users are responsible for more tweets than others. </li>
+    <div><center><span><img src='figures/n_tweets_veryshort.png' style="width: 30%; height: 30%"></span><span><img src='figures/n_tweets_short.png' style="width: 30%; height: 30%"></span><span><img src='figures/n_tweets_long.png' style="width: 30%; height: 30%"></span><br><small>Figure: (Log-scaled) number of users against total number of tweets represented in the corpus; over 2 million users correspond to less than 10 tweets each.</small></center></div></ul>
+</section>
+
+
+<section>
+ <h3>Inferred metadata</h3>
+
+        <div class='fragment' style="float: right;width: 40%; padding-left: 60px;"><img  src="figures/localisation_map.png"><br><small>Figure: Localised users over a 10km grid.</small></div>
+<ul style="display: block; padding-top: 30px;">
+    <li ><defs>1,963,409</defs> users were classified for <defs>location</defs> and <b>determined to come from the British Isles</b>: associated with latitude-longitude pairs corresponding to an individual lowest-level place in the ONS 'Index of Place Names' (England, Scotland, Wales, and Northern Ireland) or a townland in the Ordnance Survey of Ireland (Republic of Ireland). 
+     <ul><li><defs>mentions</defs> of low-level places (‘Cambridge’, ‘Ballymaguigan’) and regions, both formally- and informally-defined (‘Herefordshire’; ‘the North’; ‘Norn Iron’), weighted by number of occurrences, context, and distance between the places mentioned, in <defs>user location field, bio, or tweet text</defs></li>
+<li><defs>interaction</defs> with a set of ‘official’ accounts manually determined to correspond to specific local areas (local government and services — police, fire, county and city councils, health authorities, and school boards). </li>
+</ul>
+</ul>
+</section>
+
+
+    <section>
+ <h3>Inferred metadata</h3>
+
+        <ul>
+    <li>Location was <defs>easiest to infer for the most prolific users</defs>: while just under 2 million of approx. 6 million users (1, 963, 409 of 6, 121, 716; 32%) were ‘localisable’, this scaled with the amount of text available for an individual user.</li>
+<div><center><span><img src='figures/location_prolific.png'></span><br><small>Figure. (Logarithmic) number of users against number of tweets for the whole corpus, and for localised users only.</small></center></div></ul>
+</section>
+
+    <section>
+ <h3>Inferred metadata</h3>
+
+        <ul>
+    <li>Location was <defs>easiest to infer for the most prolific users</defs>: while just under 2 million of approx. 6 million users (1, 963, 409 of 6, 121, 716; 32%) were ‘localisable’, this scaled with the amount of text available for an individual user.</li>
+<div><center><span><img src='figures/location_prolific_percent.png'></span><br><small>Figure. Percentage of all users ‘localisable’, as a function of the number of tweets.</small></center></div></ul>
+</section>
+        
+
+        <section>
+ <h3>Inferred metadata</h3>
+
+        <ul>
+    <li ><defs>294,121</defs> users were classified for <defs>age</defs>, at different levels of granularity:
+     <ul><li><i>precise</i> classifications based on exact matches for age or birth year ('I was born in ...', 'It's my ___th birthday today')</li>
+<li><i>fine</i> age categories ('I'm in my 40s', 'I'm a 90s kid')</li>
+<li><i>broad</i> age categories (scored based on a dictionary of keywords — ‘retired’, ‘dad of three’, ’college student’, ‘Fortnite’ ...). </li>
+</ul>
+<li>Differences in the distribution of informativeness across different age groups.</li>
+<ul><li> Users who specified actual ages or birthyears were disproportionately the youngest users; users binned into the middle category were disproportionately those who gave keywords <i>not</i> associated with the youngest group (generally occupational or familial), but no further information with which to narrow down. </li></ul>
+<div><center><span><img src='figures/age_1.png' style="width: 40%; height: 45%"></span><span><img src='figures/age_2.png' style="width: 40%; height: 45%"></span><br><small>Figure. Left: number of users in each broad age category, sub-categorised by decade-level ‘fine’ category. Right: users for whom birthyear-level age was inferred.</small></center></div></ul>
+</section>
+
+    <section>
+ <h3>Inferred metadata</h3>
+
+        <ul>
+    <li>Age was also easiest to infer for the most prolific users (the percentage of users for whom age metadata works scales with number of tweets).</li>
+<center><span><img src='figures/age_prolific.png'></span></center></ul>
+</section>
+
+    <section>
+ <h3>Inferred metadata</h3>
+
+        <ul>
+    <li>Age was also easiest to infer for the most prolific users (the percentage of users for whom age metadata works scales with number of tweets).</li>
+<center><span><img src='figures/age_prolific_percent.png'></span></center></ul>
+</section>
+        
+<section>
+         <h3>The atlas exploration tool</h3>
+         <div><div class='col'>         <ul>
+    <li>We're currently developing an interactive online <defs>atlas</defs> that allows both linguists and the general public to quickly test generalisations in datasets extracted from our corpus.</li>
+    </ul></div><div class='col'><iframe id='scaled_frame' width=850px height=450px marginheight="0" marginwidth="0" src="https://tweetolectology-atlas.nw.r.appspot.com/"></div></div>
+</iframe>
+          
+</section>
+
+<section>
+         <h3>Today's focus</h3>
+         <div><div class='col'>         <ul>
+    <li>How well does this corpus work? What can we do?</li>
+<ul><li class='fragment'>Can we deepen or improve upon existing descriptions of the geographical distribution of variation?</li></ul>
+<li class='fragment'><defs>Our thoughts for today:</defs></li>
+<ul><li class='fragment'>Twitter data allows us to begin to understand varieties that are relatively under-represented in the sociolinguistic literature, eg. West Midlands.  
+</li>
+<li class='fragment'>Certain features may characterise a <defs>generalised urban British English</defs>, rather than a more geographically-bounded variety like Multicultural London English.</li><ul>
+<li class='fragment'><defs>Preposition deletion</defs>;</li>
+<li class='fragment'><defs><i>bare</i></defs> as <defs>intensifier</defs> and <defs>quantifier</defs>;</li>
+<li class='fragment'><defs><i>Why ... for</i>	</defs> questions.</li></ul>
+</ul>
+    </ul></div></div>
+</iframe>
+          
+</section>
+
+
+        
+        <section>
+         <h3>Preposition drop</h3>
+         <ul><li>The presence of constructions with <defs>no overt preposition</defs> where ‘standard’ varieties of English would have ’to’ has been reported for several different varieties of English.</li>
+         <longexample><examples><b>Lancashire</b>.</examples> Today I’m going the library. <citation>(Myler 2011, 2013; Biggs 2014)</citation><br>
+         <examples><b>Liverpool</b>.</examples> Swim the end and back. <citation>(Biggs 2014)</citation><br>
+         <examples><b>Manchester</b>.</examples> She went the pub. <citation>(Haddican 2010)</citation><br>
+         <examples><b>London, Kent</b>.</examples> I haven't been Shoreditch in ages. <citation>(Bailey 2018, Hall 2019)</citation></longexample>
+<li class='fragment'>These different dialects seem to correspond to syntactic differences.</li>
+<ul><li class='fragment'>In the <defs>south-east</defs> <citation>(Bailey 2018, Hall 2019)</citation>:</li>
+<ul>
+<li class='fragment'>the determiner is absent (<i>go pub</i>, but not <i>go the pub</i>);</li>
+<li class='fragment'> the verb must be directional <i>go</i> or <i>come</i>;</li>
+<li class='fragment'>modification (<i><defs><i>straight</i></defs> the pub, <defs><i>right</i></defs> the pub</i>) is impossible.</li>
+</ul>
+<li class='fragment'>In the <defs>north-west</defs>:</li>
+<ul>
+<li class='fragment'>the determiner is <defs>present</defs>: <i>I'm going the pub</i> <citation>(Haddican 2010</citation>, <i>John came the pub with me</i> <citation>(Biggs 2014)</citation>;</li>
+<li class='fragment'>a wider range of verbs (<i>come, go, run, drive, nip, jog</i>) is available in Lancashire <citation>(Myler 2011)</citation>, and wider still in Liverpool (<i>Joe plodded the pub</i>; <i>swim the end and back</i>; <citation>Biggs 2014</citation>). </li>
+<li class='fragment'>modification (<i><defs><i>straight</i></defs> the pub, <defs><i>right</i></defs> the pub</i>) is impossible in Lancashire <citation>(Myler 2011)</citation> but possible in Liverpool <citation>(Biggs 2014)</citation>.</li>
+</ul></ul></ul>
+</section>
+
+       <section>
+         <h3>Preposition drop</h3>
+<ul>
+<li class='fragment'>This rather disjoint picture of the overall <defs>geographical distribution</defs> of preposition deletion in British English corresponds both to descriptive gaps in the literature, and to variation in the extent to which this feature is considered regionally or sociolinguistically particular: </li>
+<ul><blockquote class='fragment'>Bare NPs after GO are heard in young people’s informal English, whether or not they are speakers of the multiethnolect, but they are far more frequent in the multiethnolect [Multicultural London English]. <citation>(Cheshire, Nortier & Adger 2015: 11)</citation></blockquote>
+<li class='fragment'>Described as a feature of the speech of “<i>a subset of English speakers in London (and some surrounding areas)</i>” by <citation>Hall (2019)</citation>, who treats the London pattern as a different phenomenon to that reported for varieties in the UK;</li>
+<li class='fragment'><citation>Bailey (2016, 2018)</citation>: preposition drop occurs in ‘<i>southeast English</i>’, noting that this is deliberately vague and the boundaries are unknown.</li></ul>
+<li class='fragment'>Should we take the existing data to reflect a high degree of interspeaker variation within preposition-drop varieties, or more systematic regional variation?</li>
+</ul>
+</section>
+
+<section>
+ <h3>Preposition drop: <b>our data</b></h3>
+
+        <div class='fragment' style="float: right;width: 40%; padding-left: 60px;"><img  src="figures/prep_drop_overall.png"><br><small>Figure: Preposition drop across all contexts and all users.</small></div>
+<ul style="display: block; padding-top: 30px;">
+    <li >We searched the corpus for all forms of the verbs <i>go, come, walk, head, return, drive, travel, fly, rush, swim</i>, returning <defs>761,361</defs> posts by 505,580 unique users. Of these, we could associate <citation>location metadata</citation> with <defs>597,945</defs> tweets posted by <defs>306,100</defs> unique users, and <citation>age metadata</citation> with <defs>178,604</defs> posts by <defs>45,307</defs> users. 
+<li class='fragment'>What we seem to be able to add to the existing literature is the missing data about geographically-intermediate regions: across all contexts, preposition drop is found at the <defs>highest rates</defs> in our data in the West Midlands, with a clear, spatially-contiguous region running from Liverpool to London distinguished from the surrounding area by high rates of preposition deletion.</li><ul><li class='fragment'>A secondary zone of innovation in the South-West.</li></ul>	
+</ul>
+</section>
+  
+<section>
+ <h3>Preposition drop: <b>our data</b></h3>
+
+        <div class='fragment' style="float: right;width: 40%; padding-left: 60px;"><img  src="figures/prep_drop_modifier.png"><br><small>Figure: Preposition drop <i>with modifier</i>.</small></div>
+<ul style="display: block; padding-top: 30px;">
+    <li >We searched the corpus for all forms of the verbs <i>go, come, walk, head, return, drive, travel, fly, rush, swim</i>, returning <defs>761,361</defs> posts by 505,580 unique users. Of these, we could associate <citation>location metadata</citation> with <defs>597,945</defs> tweets posted by <defs>306,100</defs> unique users, and <citation>age metadata</citation> with <defs>178,604</defs> posts by <defs>45,307</defs> users. 
+<ul><li class='fragment'>Preposition drop <b>with modifier</b> seems to be subject to stronger geographical restrictions that correspond to the predictions of the literature.</li></ul>	
+</ul>
+</section>
+  
+<section>
+ <h3>Preposition drop: <b>our data</b></h3>
+
+        <ul>
+    <li>Although our continuous age metadata is very limited, there is some suggestion of a generalised diachronic pattern; preposition drop without modifier, without determiner (the 'London' type) seems to change in frequency with time, while preposition drop with determiner is fairly stable. </li>
+<ul><li class='fragment'> — and binning the data by the nearest of several possible major centres, it is consistently the West Midlands that stands out as most innovative.</li></ul>
+<center><span><img src='figures/prep_drop_diachrony_all.png'></span></center></ul>
+</section>
+
+<section>
+ <h3>Preposition drop: <b>our data</b></h3>
+
+        <ul>
+    <li>Although our continuous age metadata is very limited, there is some suggestion of a generalised diachronic pattern; preposition drop without modifier, without determiner (the 'London' type) seems to change in frequency with time, while preposition drop with determiner is fairly stable. </li>
+<ul><li> — and binning the data by the nearest of several possible major centres, it is consistently the West Midlands that stands out as most innovative.</li></ul>
+<center><span><img src='figures/prep_drop_diachrony_cities.png'></span></center></ul>
+</section>
+
+<section>
+ <h3>Preposition drop: <b>our data</b></h3>
+
+        <ul>
+    <li>Although our continuous age metadata is very limited, there is some suggestion of a generalised diachronic pattern; preposition drop without modifier, without determiner (the 'London' type) seems to change in frequency with time, while preposition drop with determiner is fairly stable. </li>
+<ul><li> — and binning the data by the nearest of several possible major centres, it is consistently the West Midlands that stands out as most innovative.</li></ul>
+<div><center><span><img src='figures/prep_drop_90.png' style="width: 30%; height: 30%"></span><span><img src='figures/prep_drop_60.png' style="width: 30%; height: 30%"></span><span><img src='figures/prep_drop_30.png' style="width: 30%; height: 30%"></span><br><small>Figure: From left to right, <defs>broad</defs> age categorisations and the relative stability of +determiner-preposition drop/the advancement of –determiner–preposition drop.</small></center></div></ul>
+</section>
+
+<section>
+ <h3><b>bare</b> as quantifier and intensifier</h3>
+<ul>
+    <li ><i>bare</i> with various functions is listed as a ‘core characteristic’ feature of ‘Multicultural London English’ by <citation>Kircher & Fox (2019:849)</citation>, citing <citation>Kerswill (2013)</citation>.</li>
+<ul><li class='fragment'><citation>Núñez-Pertejo & Palacios-Martínez (2018)</citation> find that its use peaks among younger teenagers; most frequently as a <defs>quantifier</defs> (“I ... got bare friends”, “you just see bare people”, “I can hear bare noise”), especially with ‘people’; sometimes nominalised as <i>bares</i> (“I failed bares”, “end up with money ... bares of it”); also as an <defs>adjectival intensifier</defs> (“bare good looking”, “bare mean”); and sometimes in other functions (“he was bare like ‘...’”, “I got bare out of maths”). </li>
+
+</li>
+<ul><li class='fragment'>This is not as well-studied a feature, but inasmuch as there is a previous proposal here for the geospatial distribution of the various functions of <i>bare</i>, it is a proposal for a distribution centred around London.</li></ul>	
+</ul>
+<div><center><span><img class='fragment' src='figures/bare_quantifier.png' style="width: 30%; height: 45%"></span> <span><img class='fragment' src='figures/bare_intensifier.png' style="width: 30%; height: 45%"></span><br><small>Figure. Left: number of users in each broad age category, sub-categorised by decade-level ‘fine’ category. Right: users for whom birthyear-level age was inferred.</small></center></div>
+</section>
+
+<section>
+ <h3><b>bare</b> as quantifier and intensifier</h3>
+<ul>
+    <li ><i>bare</i> with various functions is listed as a ‘core characteristic’ feature of ‘Multicultural London English’ by <citation>Kircher & Fox (2019:849)</citation>, citing <citation>Kerswill (2013)</citation>.</li>
+<ul><li><citation>Núñez-Pertejo & Palacios-Martínez (2018)</citation> find that its use peaks among younger teenagers; most frequently as a <defs>quantifier</defs> (“I ... got bare friends”, “you just see bare people”, “I can hear bare noise”), especially with ‘people’; sometimes nominalised as <i>bares</i> (“I failed bares”, “end up with money ... bares of it”); also as an <defs>adjectival intensifier</defs> (“bare good looking”, “bare mean”); and sometimes in other functions (“he was bare like ‘...’”, “I got bare out of maths”). </li>
+
+</li>
+<ul><li>This is not as well-studied a feature, but inasmuch as there is a previous proposal here for the geospatial distribution of the various functions of <i>bare</i>, it is a proposal for a distribution centred around London.</li></ul>	
+</ul>
+<div><center><span><img src='figures/bare_quantifier_doubled.png' style="width: 30%; height: 45%"></span> <span><img src='figures/bare_intensifier_doubled.png' style="width: 30%; height: 45%"></span><br><small>Figure. Left: number of users in each broad age category, sub-categorised by decade-level ‘fine’ category. Right: users for whom birthyear-level age was inferred.</small></center></div>
+</section>
+
+<section>
+ <h3><b>bare</b> as quantifier and intensifier</h3>
+<ul>
+    <li ><i>bare</i> with various functions is listed as a ‘core characteristic’ feature of ‘Multicultural London English’ by <citation>Kircher & Fox (2019:849)</citation>, citing <citation>Kerswill (2013)</citation>.</li>
+<ul><li class='fragment'><citation>Núñez-Pertejo & Palacios-Martínez (2018)</citation> find that its use peaks among younger teenagers; most frequently as a <defs>quantifier</defs> (“I ... got bare friends”, “you just see bare people”, “I can hear bare noise”), especially with ‘people’; sometimes nominalised as <i>bares</i> (“I failed bares”, “end up with money ... bares of it”); also as an <defs>adjectival intensifier</defs> (“bare good looking”, “bare mean”); and sometimes in other functions (“he was bare like ‘...’”, “I got bare out of maths”). </li>
+
+</li>
+<ul><li class='fragment'>This is not as well-studied a feature, but inasmuch as there is a previous proposal here for the geospatial distribution of the various functions of <i>bare</i>, it is a proposal for a distribution centred around London.</li></ul>	
+</ul>
+<div><center><span><img class='fragment' src='figures/bare_quantifier.png' style="width: 30%; height: 45%"></span> <span><img class='fragment' src='figures/bare_intensifier.png' style="width: 30%; height: 45%"></span><br><small>Figure. Left: number of users in each broad age category, sub-categorised by decade-level ‘fine’ category. Right: users for whom birthyear-level age was inferred.</small></center></div>
+</section>
+
+      </div>
+
+      <div class="line top"></div>
+      <div class="line bottom"></div>
+      <div class="line left"></div>
+      <div class="line right"></div>
+
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+
+      // More info https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: false,
+        progress: true,
+        history: true,
+        center: true,
+                        margin: 0.1,
+
+        transition: 'none', // none/fade/slide/convex/concave/zoom
+        transitionSpeed: 'extra fast',
+
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/search/search.js', async: true },
+          { src: 'plugin/zoom-js/zoom.js', async: true },
+          { src: 'plugin/notes/notes.js', async: true }
+        ]
+      });
+
+    </script>
+
+    <script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+     gtag('config', "UA-24132749-1");
+    </script>
+
+  </body>
+</html>
