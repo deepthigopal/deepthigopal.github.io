@@ -69,15 +69,6 @@ Deepthi Gopal (Cambridge) • <a>dg537@cam.ac.uk</a></p>
         <ul>
     <li>The GB/IE English corpus in all: <defs>6,121,716</defs> unique users responsible for <defs>546,398,943</defs> tweets. </li>
     <ul><li>Tweets have <defs>two sources</defs>: one is the Twitter 'streaming' API, which allows us to download all tweets Twitter-geotagged within a geographical bounding box around the UK and Ireland. This kind of geotagging is opt-in, so biased; we also downloaded data corresponding to posts by <i>users mentioned by the users in the streaming data</i>, accounting for some representation of Tweets posted before the start of data collection.</li></ul>
-<div><center><img src='figures/corpus_overall.png'><br><small>Figure: Number of Tweets in the full UK & Ireland English corpus by date of original posting.</small></center></div></ul>
-</section>
-
-<section>
- <h3>The corpus</h3>
-
-        <ul>
-    <li>The GB/IE English corpus in all: <defs>6,121,716</defs> unique users responsible for <defs>546,398,943</defs> tweets. </li>
-    <ul><li>Tweets have <defs>two sources</defs>: one is the Twitter 'streaming' API, which allows us to download all tweets Twitter-geotagged within a geographical bounding box around the UK and Ireland. This kind of geotagging is opt-in, so biased; we also downloaded data corresponding to posts by <i>users mentioned by the users in the streaming data</i>, accounting for some representation of Tweets posted before the start of data collection.</li></ul>
 <div><center><img src='figures/data_source.png'><br><small>Figure: Number of Tweets by date, divided by source of data (directly streamed, or scraped from the profile of a user mentioned in the original stream).</small></center></div></ul>
 </section>
 
@@ -100,15 +91,6 @@ Deepthi Gopal (Cambridge) • <a>dg537@cam.ac.uk</a></p>
 <li><defs>interaction</defs> with a set of ‘official’ accounts manually determined to correspond to specific local areas (local government and services — police, fire, county and city councils, health authorities, and school boards). </li>
 </ul>
 </ul>
-</section>
-
-
-    <section>
- <h3>Inferred metadata</h3>
-
-        <ul>
-    <li>Location was <defs>easiest to infer for the most prolific users</defs>: while just under 2 million of approx. 6 million users (1, 963, 409 of 6, 121, 716; 32%) were ‘localisable’, this scaled with the amount of text available for an individual user.</li>
-<div><center><span><img src='figures/location_prolific.png'></span><br><small>Figure. (Logarithmic) number of users against number of tweets for the whole corpus, and for localised users only.</small></center></div></ul>
 </section>
 
     <section>
@@ -138,16 +120,8 @@ Deepthi Gopal (Cambridge) • <a>dg537@cam.ac.uk</a></p>
  <h3>Inferred metadata</h3>
 
         <ul>
-    <li>Age was also easiest to infer for the most prolific users (the percentage of users for whom age metadata works scales with number of tweets).</li>
-<center><span><img src='figures/age_prolific.png'></span></center></ul>
-</section>
-
-    <section>
- <h3>Inferred metadata</h3>
-
-        <ul>
-    <li>Age was also easiest to infer for the most prolific users (the percentage of users for whom age metadata works scales with number of tweets).</li>
-<center><span><img src='figures/age_prolific_percent.png'></span></center></ul>
+    <li>Age was also easiest to infer for the most prolific users (the percentage of users for whom age metadata works scales with number of tweets) — the more users told us about themselves, the more likely we were to make a guess (broad <i>or</i> narrow); but never as consistent as localisation. </li>
+<div><center><span><img src='figures/age_prolific_percent.png'></span><br><small>Figure. Percentage of all users for whom age could be inferred, as a function of the number of tweets.</small></center></div></ul>
 </section>
         
 <section>
@@ -217,6 +191,7 @@ Deepthi Gopal (Cambridge) • <a>dg537@cam.ac.uk</a></p>
         <div class='fragment' style="float: right;width: 40%; padding-left: 60px;"><img  src="figures/prep_drop_overall.png"><br><small>Figure: Preposition drop across all contexts and all users.</small></div>
 <ul style="display: block; padding-top: 30px;">
     <li >We searched the corpus for all forms of the verbs <i>go, come, walk, head, return, drive, travel, fly, rush, swim</i>, returning <defs>761,361</defs> posts by 505,580 unique users. Of these, we could associate <citation>location metadata</citation> with <defs>597,945</defs> tweets posted by <defs>306,100</defs> unique users, and <citation>age metadata</citation> with <defs>178,604</defs> posts by <defs>45,307</defs> users. 
+<ul><li>Restricted here to <defs>nouns for which determiners are generally obligatory</defs> — i. e. no <i>bed, home, ...</i></li></ul>
 <li >What we seem to be able to add to the existing literature is the missing data about geographically-intermediate regions: across all contexts, preposition drop is found at the <defs>highest rates</defs> in our data in the West Midlands, with a clear, spatially-contiguous region running from Liverpool to London distinguished from the surrounding area by high rates of preposition deletion.</li><ul><li >A secondary zone of innovation in the South-West.</li></ul>	
 </ul>
 </section>
@@ -224,7 +199,7 @@ Deepthi Gopal (Cambridge) • <a>dg537@cam.ac.uk</a></p>
 <section>
  <h3>Preposition drop: <b>our data</b></h3>
 
-        <div style="float: right;width: 40%; padding-left: 60px;"><img  src="figures/prep_drop_modifier.png"><br><small>Figure: Preposition drop <i>with modifier</i>.</small></div>
+        <div style="float: right;width: 40%; padding-left: 60px;"><img  src="figures/prep_drop_modifier.png"><br><small>Figure: Preposition drop <defs>with modifier</defs>: <i>go straight pub, go straight the pub, go straight to the pub</i>.</small></div>
 <ul style="display: block; padding-top: 30px;">
     <li >Preposition drop <b>with modifier</b> seems to be subject to stronger geographical restrictions that correspond to the predictions of the literature.</li>	
 </ul>
@@ -235,6 +210,7 @@ Deepthi Gopal (Cambridge) • <a>dg537@cam.ac.uk</a></p>
 
         <ul>
     <li>Although our continuous age metadata is very limited, there is some suggestion of a generalised diachronic pattern; preposition drop without modifier, without determiner (the 'London' type) seems to change in frequency with time, while preposition drop with determiner is fairly stable. </li>
+<ul><li>Note that early years are greyed out; we don't really think the data in these regions is distinguishable from chance, since the distribution of ages in our metadata seems so skewed.</li></ul>
 <center><span><img src='figures/prep_drop_diachrony_all.png'></span></center></ul>
 </section>
 
@@ -248,7 +224,8 @@ Deepthi Gopal (Cambridge) • <a>dg537@cam.ac.uk</a></p>
  <h3>Preposition drop: <b>our data</b></h3>
 <ul>
 <li>The broad age categorisations allow us to map the relative rates of preposition drop; the construction retaining the determiner is still stable in apparent time, but preposition drop <i>without</i> determiner seems to be diffusing from the North West and West Midlands outward.</li>
-<div><center><span><img src='figures/prep_drop_90.png' class='fragment' style="width: 30%; height: 30%"></span> <span><img src='figures/prep_drop_60.png' class='fragment'  style="width: 30%; height: 30%"></span> <span><img  class='fragment'  src='figures/prep_drop_30.png' style="width: 30%; height: 30%"></span><br><small>Figure: From left to right, <defs>broad</defs> age categorisations and the relative stability of +determiner-preposition drop/the advancement of –determiner–preposition drop.</small></center></div></ul>
+<div><center><span><img src='figures/prep_drop_90.png' class='fragment' style="width: 30%; height: 30%"></span> <span><img src='figures/prep_drop_60.png' class='fragment'  style="width: 30%; height: 30%"></span> <span><img  class='fragment'  src='figures/prep_drop_30.png' style="width: 30%; height: 30%"></span><br><small>Figure: From left to right, <defs>broad</defs> age categorisations and the relative stability of +determiner-preposition drop/the advancement of –determiner–preposition drop.</small></center></div>
+<ul class='fragment'><li>— so what we claim here is that even the limitations (coarsely-grained diachrony, variance, error) <defs>don't prevent a good story about diffusion in both space and time</defs>. </li></ul></ul>
 </section>
 
 <section>
@@ -260,7 +237,7 @@ Deepthi Gopal (Cambridge) • <a>dg537@cam.ac.uk</a></p>
 </li>
 <ul><li class='fragment'>Not as well-studied a feature, but if there is a previous proposal here for the geospatial distribution of the various functions of <i>bare</i>, it is a proposal for a distribution centred around London.</li></ul>	
 </ul>
-<div><center><span><img class='fragment' src='figures/bare_quantifier.png' style="width: 30%; height: 45%"></span> <span><img class='fragment' src='figures/bare_intensifier.png' style="width: 30%; height: 45%"></span><br><small>Figure. Left: <defs>bare as quantifier</defs>. Right: <defs>bare as intensifier</defs>.</small></center></div>
+<div class='fragment' ><center><span><img src='figures/bare_quantifier.png' style="width: 30%; height: 45%"></span> <span><img src='figures/bare_intensifier.png' style="width: 30%; height: 45%"></span><br><small>Figure. Left: <defs>bare as quantifier</defs>. Right: <defs>bare as intensifier</defs>.</small></center></div>
 </section>
 
 <section>
