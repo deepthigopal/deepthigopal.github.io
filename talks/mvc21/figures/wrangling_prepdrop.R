@@ -17,6 +17,37 @@ return(new)
 }
 
 
+
+
+
+
+
+do_data <- function(data){
+new = data[c('user_name','variant','final_age','latitude','longitude','nearest_area')]
+new <- na.omit(new)
+new[new$variant != 'bare',]$variant <- 'other variants'
+new %<>% group_by(user_name) %>% mutate(age = mean(final_age)) %>% ungroup()
+new$final_age <- new$age
+new %<>% group_by(user_name,final_age,variant,nearest_area) %>% summarise(variant_count = n())
+new %<>% group_by(user_name) %>% mutate(n = sum(variant_count)) %>% ungroup()
+new$score <- new$variant_count/new$n
+bad <- new[(new$variant !='bare')&(new$score==1),]
+bad$score <- 0
+bad$variant <- 'bare'
+new <- rbind(new,bad)
+new %<>% group_by(final_age,variant,nearest_area) %>% summarise(final = n(),score = mean(score))
+return(new)
+}
+
+
+
+
+
+
+
+
+
+
 m <- glm(score ~ birthyear + nearest_area, family = binomial, data = subset(new,modifier_status=='modifier_absent' & new$variant=='preposition_dropped'))
 
 

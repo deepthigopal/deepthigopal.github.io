@@ -13,6 +13,10 @@
 
     <link rel="stylesheet" href="css/reveal.css">
     <link rel="stylesheet" href="css/theme/sunblind.css" id="theme">
+<link rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Playfair+Display">
 
     <!-- Theme used for syntax highlighting of code -->
     <link rel="stylesheet" href="lib/css/zenburn.css">
@@ -52,10 +56,10 @@ Deepthi Gopal (Cambridge) • <a>dg537@cam.ac.uk</a></p>
         <ul>
     <li>ESRC project ‘Investigating the diffusion of morphosyntactic innovations using social media’, September 2017—January 2021.</li>
 <ul class='fragment'><li>David Willis (PI, Oxford)</li><li>Adrian Leemann (CI, Bern)</li><li>Tam Blaxter (CI, Cambridge)</li><li>Deepthi Gopal (RA, Cambridge)</li><li>Jonathan Mackenzie (IT, Cambridge).</li></ul>
-<li class='fragment'>Geospatial patterns of morphosyntactic variation in Twitter corpora for <defs>British English, Welsh, Norwegian/mainland Scandinavian</defs>; also <defs>Turkish, Icelandic, Slovene, Haitian Creole</defs>.</li>
+<li class='fragment'>Geospatial patterns of morphosyntactic variation in Twitter corpora for <defs>the English of UK and Ireland, Welsh, Norwegian/mainland Scandinavian</defs>; also <defs>Turkish, Icelandic, Slovene, Haitian Creole</defs>.</li>
     <ul><li class='fragment'>Much, although not all existing work using large-scale social-media data: frequent, often lexical patterns; very large languages, like American English; very large geographical scales (North America, 'the world').<small>(Eisenstein et al. 2014; Russ 2012; Doyle 2014; Bamman et al. 2014; Gonçalves & Sánchez 2014; Grieve et al. 2013; Grieve et al. 2017; Grieve et al. 2018; Grieve et al. 2019)</small> </li>
 <li class='fragment'>Our general aim: smaller languages, finely-grained geographical patterning, extension to apparent time.</li>
-<li class='fragment'><defs>Focus for today's talk:</defs><ul><li> patterns in the British English corpus, and filling in geographical gaps in our understanding of recent innovations.</li></ul> </li>
+<li class='fragment'><defs>Focus for today's talk:</defs><ul><li> patterns in the UK and Ireland corpus, and filling in geographical gaps in our understanding of recent innovations.</li></ul> </li>
     </ul></ul>
 </section>
 
@@ -63,17 +67,17 @@ Deepthi Gopal (Cambridge) • <a>dg537@cam.ac.uk</a></p>
  <h3>The corpus</h3>
 
         <ul>
-    <li>The British English corpus in all: <defs>6,121,716</defs> unique users responsible for <defs>546,398,943</defs> tweets. </li>
-    <ul><li>Tweets have <defs>two sources</defs>: one is the Twitter 'streaming' API, which allows us to download all tweets Twitter-geotagged within a geographical bounding box around the UK and Northern Ireland. This kind of geotagging is opt-in, so biased; we also downloaded data corresponding to posts by <i>users mentioned by the users in the streaming data</i>, accounting for some representation of Tweets posted before the start of data collection.</li></ul>
-<div><center><img src='figures/corpus_overall.png'><br><small>Figure: Number of Tweets in the full British English corpus by date of original posting.</small></center></div></ul>
+    <li>The GB/IE English corpus in all: <defs>6,121,716</defs> unique users responsible for <defs>546,398,943</defs> tweets. </li>
+    <ul><li>Tweets have <defs>two sources</defs>: one is the Twitter 'streaming' API, which allows us to download all tweets Twitter-geotagged within a geographical bounding box around the UK and Ireland. This kind of geotagging is opt-in, so biased; we also downloaded data corresponding to posts by <i>users mentioned by the users in the streaming data</i>, accounting for some representation of Tweets posted before the start of data collection.</li></ul>
+<div><center><img src='figures/corpus_overall.png'><br><small>Figure: Number of Tweets in the full UK & Ireland English corpus by date of original posting.</small></center></div></ul>
 </section>
 
 <section>
  <h3>The corpus</h3>
 
         <ul>
-    <li>The British English corpus in all: <defs>6,121,716</defs> unique users responsible for <defs>546,398,943</defs> tweets. </li>
-    <ul><li>Tweets have <defs>two sources</defs>: one is the Twitter 'streaming' API, which allows us to download all tweets Twitter-geotagged within a geographical bounding box around the UK and Northern Ireland. This kind of geotagging is opt-in, so biased; we also downloaded data corresponding to posts by <i>users mentioned by the users in the streaming data</i>, accounting for some representation of Tweets posted before the start of data collection.</li></ul>
+    <li>The GB/IE English corpus in all: <defs>6,121,716</defs> unique users responsible for <defs>546,398,943</defs> tweets. </li>
+    <ul><li>Tweets have <defs>two sources</defs>: one is the Twitter 'streaming' API, which allows us to download all tweets Twitter-geotagged within a geographical bounding box around the UK and Ireland. This kind of geotagging is opt-in, so biased; we also downloaded data corresponding to posts by <i>users mentioned by the users in the streaming data</i>, accounting for some representation of Tweets posted before the start of data collection.</li></ul>
 <div><center><img src='figures/data_source.png'><br><small>Figure: Number of Tweets by date, divided by source of data (directly streamed, or scraped from the profile of a user mentioned in the original stream).</small></center></div></ul>
 </section>
 
@@ -91,7 +95,7 @@ Deepthi Gopal (Cambridge) • <a>dg537@cam.ac.uk</a></p>
 
         <div class='fragment' style="float: right;width: 40%; padding-left: 60px;"><img  src="figures/localisation_map.png"><br><small>Figure: Localised users over a 10km grid.</small></div>
 <ul style="display: block; padding-top: 30px;">
-    <li ><defs>1,963,409</defs> users were classified for <defs>location</defs> and <b>determined to come from the British Isles</b>: associated with latitude-longitude pairs corresponding to an individual lowest-level place in the ONS 'Index of Place Names' (England, Scotland, Wales, and Northern Ireland) or a townland in the Ordnance Survey of Ireland (Republic of Ireland). 
+    <li ><defs>1,963,409</defs> users were classified for <defs>location</defs> and <b>determined to come from the UK, Ireland or the Isle of Man</b>: each user is associated with a latitude-longitude pair corresponding to an individual lowest-level place in the ONS 'Index of Place Names' (England, Scotland, Wales, and Northern Ireland) or a townland in the Ordnance Survey of Ireland (Republic of Ireland). 
      <ul><li><defs>mentions</defs> of low-level places (‘Cambridge’, ‘Ballymaguigan’) and regions, both formally- and informally-defined (‘Herefordshire’; ‘the North’; ‘Norn Iron’), weighted by number of occurrences, context, and distance between the places mentioned, in <defs>user location field, bio, or tweet text</defs></li>
 <li><defs>interaction</defs> with a set of ‘official’ accounts manually determined to correspond to specific local areas (local government and services — police, fire, county and city councils, health authorities, and school boards). </li>
 </ul>
@@ -163,10 +167,9 @@ Deepthi Gopal (Cambridge) • <a>dg537@cam.ac.uk</a></p>
 <li class='fragment'><defs>Our thoughts for today:</defs></li>
 <ul><li class='fragment'>Twitter data allows us to begin to understand varieties that are relatively under-represented in the sociolinguistic literature, eg. West Midlands.  
 </li>
-<li class='fragment'>Certain features may characterise a <defs>generalised urban British English</defs>, rather than a more geographically-bounded variety like Multicultural London English.</li><ul>
+<li class='fragment'>Certain features may characterise a <defs>generalised ‘urban British English‘</defs>, rather than a more geographically-bounded variety like Multicultural London English. For this (short!) talk:</li><ul>
 <li class='fragment'><defs>Preposition deletion</defs>;</li>
-<li class='fragment'><defs><i>bare</i></defs> as <defs>intensifier</defs> and <defs>quantifier</defs>;</li>
-<li class='fragment'><defs><i>Why ... for</i>	</defs> questions.</li></ul>
+<li class='fragment'><defs><i>bare</i></defs> as <defs>intensifier</defs> and <defs>quantifier</defs>.</li>
 </ul>
     </ul></div></div>
 </iframe>
@@ -233,26 +236,20 @@ Deepthi Gopal (Cambridge) • <a>dg537@cam.ac.uk</a></p>
 
         <ul>
     <li>Although our continuous age metadata is very limited, there is some suggestion of a generalised diachronic pattern; preposition drop without modifier, without determiner (the 'London' type) seems to change in frequency with time, while preposition drop with determiner is fairly stable. </li>
-<ul><li class='fragment'> — and binning the data by the nearest of several possible major centres, it is consistently the West Midlands that stands out as most innovative.</li></ul>
 <center><span><img src='figures/prep_drop_diachrony_all.png'></span></center></ul>
 </section>
 
 <section>
  <h3>Preposition drop: <b>our data</b></h3>
-
-        <ul>
-    <li>Although our continuous age metadata is very limited, there is some suggestion of a generalised diachronic pattern; preposition drop without modifier, without determiner (the 'London' type) seems to change in frequency with time, while preposition drop with determiner is fairly stable. </li>
-<ul><li> — and binning the data by the nearest of several possible major centres, it is consistently the West Midlands that stands out as most innovative.</li></ul>
-<center><span><img src='figures/prep_drop_diachrony_cities.png'></span></center></ul>
+<ul><li> — and binning the data by the nearest of several possible major centres, <defs>it is consistently the West Midlands that stands out as most innovative for preposition drop without determiner</defs>; Liverpool is consistently the center for determiner-retaining preposition drop, but this is more stable in apparent time.</li>
+<center><span><img src='figures/prep_drop_diachrony_cities.png'></span><br><small>Figure. Left: <defs>preposition deletion with no determiner</defs> <i>go pub</i>, on the rise in all major localities. Right: <defs>preposition deletion with determiner retained</defs> <i>go the pub</i>, stable. </small></center></ul>
 </section>
 
 <section>
  <h3>Preposition drop: <b>our data</b></h3>
-
-        <ul>
-    <li>Although our continuous age metadata is very limited, there is some suggestion of a generalised diachronic pattern; preposition drop without modifier, without determiner (the 'London' type) seems to change in frequency with time, while preposition drop with determiner is fairly stable. </li>
-<ul><li> — and binning the data by the nearest of several possible major centres, it is consistently the West Midlands that stands out as most innovative.</li></ul>
-<div><center><span><img src='figures/prep_drop_90.png' style="width: 30%; height: 30%"></span><span><img src='figures/prep_drop_60.png' style="width: 30%; height: 30%"></span><span><img src='figures/prep_drop_30.png' style="width: 30%; height: 30%"></span><br><small>Figure: From left to right, <defs>broad</defs> age categorisations and the relative stability of +determiner-preposition drop/the advancement of –determiner–preposition drop.</small></center></div></ul>
+<ul>
+<li>The broad age categorisations allow us to map the relative rates of preposition drop; the construction retaining the determiner is still stable in apparent time, but preposition drop <i>without</i> determiner seems to be diffusing from the North West and West Midlands outward.</li>
+<div><center><span><img src='figures/prep_drop_90.png' class='fragment' style="width: 30%; height: 30%"></span> <span><img src='figures/prep_drop_60.png' class='fragment'  style="width: 30%; height: 30%"></span> <span><img  class='fragment'  src='figures/prep_drop_30.png' style="width: 30%; height: 30%"></span><br><small>Figure: From left to right, <defs>broad</defs> age categorisations and the relative stability of +determiner-preposition drop/the advancement of –determiner–preposition drop.</small></center></div></ul>
 </section>
 
 <section>
@@ -262,9 +259,9 @@ Deepthi Gopal (Cambridge) • <a>dg537@cam.ac.uk</a></p>
 <ul><li class='fragment'><citation>Núñez-Pertejo & Palacios-Martínez (2018)</citation> find that its use peaks among younger teenagers; most frequently as a <defs>quantifier</defs> (“I ... got bare friends”, “you just see bare people”, “I can hear bare noise”), especially with ‘people’; sometimes nominalised as <i>bares</i> (“I failed bares”, “end up with money ... bares of it”); also as an <defs>adjectival intensifier</defs> (“bare good looking”, “bare mean”); and sometimes in other functions (“he was bare like ‘...’”, “I got bare out of maths”). </li>
 
 </li>
-<ul><li class='fragment'>This is not as well-studied a feature, but inasmuch as there is a previous proposal here for the geospatial distribution of the various functions of <i>bare</i>, it is a proposal for a distribution centred around London.</li></ul>	
+<ul><li class='fragment'>Not as well-studied a feature, but if there is a previous proposal here for the geospatial distribution of the various functions of <i>bare</i>, it is a proposal for a distribution centred around London.</li></ul>	
 </ul>
-<div><center><span><img class='fragment' src='figures/bare_quantifier.png' style="width: 30%; height: 45%"></span> <span><img class='fragment' src='figures/bare_intensifier.png' style="width: 30%; height: 45%"></span><br><small>Figure. Left: number of users in each broad age category, sub-categorised by decade-level ‘fine’ category. Right: users for whom birthyear-level age was inferred.</small></center></div>
+<div><center><span><img class='fragment' src='figures/bare_quantifier.png' style="width: 30%; height: 45%"></span> <span><img class='fragment' src='figures/bare_intensifier.png' style="width: 30%; height: 45%"></span><br><small>Figure. Left: <defs>bare as quantifier</defs>. Right: <defs>bare as intensifier</defs>.</small></center></div>
 </section>
 
 <section>
@@ -274,21 +271,54 @@ Deepthi Gopal (Cambridge) • <a>dg537@cam.ac.uk</a></p>
 <ul><li><citation>Núñez-Pertejo & Palacios-Martínez (2018)</citation> find that its use peaks among younger teenagers; most frequently as a <defs>quantifier</defs> (“I ... got bare friends”, “you just see bare people”, “I can hear bare noise”), especially with ‘people’; sometimes nominalised as <i>bares</i> (“I failed bares”, “end up with money ... bares of it”); also as an <defs>adjectival intensifier</defs> (“bare good looking”, “bare mean”); and sometimes in other functions (“he was bare like ‘...’”, “I got bare out of maths”). </li>
 
 </li>
-<ul><li>This is not as well-studied a feature, but inasmuch as there is a previous proposal here for the geospatial distribution of the various functions of <i>bare</i>, it is a proposal for a distribution centred around London.</li></ul>	
+<ul><li>Not as well-studied a feature, but if there is a previous proposal here for the geospatial distribution of the various functions of <i>bare</i>, it is a proposal for a distribution centred around London.</li></ul>		
 </ul>
-<div><center><span><img src='figures/bare_quantifier_doubled.png' style="width: 30%; height: 45%"></span> <span><img src='figures/bare_intensifier_doubled.png' style="width: 30%; height: 45%"></span><br><small>Figure. Left: number of users in each broad age category, sub-categorised by decade-level ‘fine’ category. Right: users for whom birthyear-level age was inferred.</small></center></div>
+<div><center><span><img src='figures/bare_quantifier_doubled.png' style="width: 30%; height: 45%"></span> <span><img src='figures/bare_intensifier_doubled.png' style="width: 30%; height: 45%"></span><br><small>Figure. Left: <defs>bare as quantifier</defs>. Right: <defs>bare as intensifier</defs>. <b>With multipliers applied to the raw values for visibility.</b></small></center></div>
 </section>
 
 <section>
  <h3><b>bare</b> as quantifier and intensifier</h3>
 <ul>
     <li ><i>bare</i> with various functions is listed as a ‘core characteristic’ feature of ‘Multicultural London English’ by <citation>Kircher & Fox (2019:849)</citation>, citing <citation>Kerswill (2013)</citation>.</li>
-<ul><li class='fragment'><citation>Núñez-Pertejo & Palacios-Martínez (2018)</citation> find that its use peaks among younger teenagers; most frequently as a <defs>quantifier</defs> (“I ... got bare friends”, “you just see bare people”, “I can hear bare noise”), especially with ‘people’; sometimes nominalised as <i>bares</i> (“I failed bares”, “end up with money ... bares of it”); also as an <defs>adjectival intensifier</defs> (“bare good looking”, “bare mean”); and sometimes in other functions (“he was bare like ‘...’”, “I got bare out of maths”). </li>
-
-</li>
-<ul><li class='fragment'>This is not as well-studied a feature, but inasmuch as there is a previous proposal here for the geospatial distribution of the various functions of <i>bare</i>, it is a proposal for a distribution centred around London.</li></ul>	
+<ul><li>Broad age categorisations suggest that both <i>bare</i> intensifier and <i>bare</i> quantifier are very recent, and on the rise:</li>
+	
 </ul>
-<div><center><span><img class='fragment' src='figures/bare_quantifier.png' style="width: 30%; height: 45%"></span> <span><img class='fragment' src='figures/bare_intensifier.png' style="width: 30%; height: 45%"></span><br><small>Figure. Left: number of users in each broad age category, sub-categorised by decade-level ‘fine’ category. Right: users for whom birthyear-level age was inferred.</small></center></div>
+<div class='fragment'><center><span><img src='figures/bare_quantifier_60.png' style="width: 30%; height: 45%"></span> <span><img src='figures/bare_quantifier_30.png' style="width: 30%; height: 45%"></span><br><small>Figure. <defs>bare as quantifier</defs>, by broad age category. Left: <defs>30–60</defs> (older speakers, with little to no <i>bare</i>; right: <defs>under 30</defs>. <b>With multipliers applied to the raw values for visibility.</b></small></center></div>
+</section>
+
+<section>
+ <h3><b>bare</b> as quantifier and intensifier</h3>
+<ul>
+    <li ><i>bare</i> with various functions is listed as a ‘core characteristic’ feature of ‘Multicultural London English’ by <citation>Kircher & Fox (2019:849)</citation>, citing <citation>Kerswill (2013)</citation>.</li>
+<ul><li>Broad age categorisations suggest that both <i>bare</i> intensifier and <i>bare</i> quantifier are very recent, and on the rise:</li>
+	
+</ul>
+<div><center><span><img src='figures/bare_intensifier_60.png' style="width: 30%; height: 45%"></span> <span><img src='figures/bare_intensifier_30.png' style="width: 30%; height: 45%"></span><br><small>Figure. <defs>bare as intensifier</defs>, by broad age category. Left: <defs>30–60</defs> (older speakers, with little to no <i>bare</i>; right: <defs>under 30</defs>. <b>With multipliers applied to the raw values for visibility.</b></small></center></div>
+</section>
+
+<section>
+ <h3><b>bare</b> as quantifier and intensifier</h3>
+<ul>
+    <li>Binning the data by the nearest of several possible major centres, <defs>it is less clear whether any individual region is categorically ahead in apparent time</defs>; Manchester, Birmingham, and London pattern together, but the differences between them are not statistically meaningful ones.</li>
+	
+<div><center><span><img src='figures/bare_quantifier_diachrony.png' style="width: 48%; height: 45%"></span> <span><img src='figures/bare_intensifier_diachrony.png' style="width: 48%; height: 45%"></span><br><small>Figure. Apparent-time trajectories for the frequency of use of <defs>bare as quantifier</defs> (left) and <defs>bare as intensifier</defs> (right). </small><br></center></div>
+    <li class='fragment'>— although with this in mind, we <i>can</i> claim that <defs>arguments for London as the primary location of either of these innovations cannot be conclusive for the same reasons</defs>.</li>
+	
+</ul>
+</section>
+
+
+<section>
+ <h3>Further thoughts</h3>
+<ul>
+    <li></li>
+	
+</ul>
+</section>
+
+
+<section>
+ <h1>Thank you!</h1>
 </section>
 
       </div>

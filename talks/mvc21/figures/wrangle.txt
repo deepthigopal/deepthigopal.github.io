@@ -20,4 +20,4 @@ data['dublin_distance'] = data.apply(lambda x: haversine(53.3498,-6.2603,x.latit
 
 nu = data[['london_distance','birmingham_distance','liverpool_distance','manchester_distance','plymouth_distance','glasgow_distance','dublin_distance']]
 data['nearest_area'] = nu.idxmin(axis=1).apply(lambda x: x[:-9])
-data.to_csv('prep_drop_binned.csv',index=False)
+data.to_csv('bare_quantifier_binned',index=False)
