@@ -6,10 +6,32 @@
 
 @font-face {
 font-family: "Junction";
-src: url("../webfonts/Junction.eot");
-src: url("../webfonts/Junction.woff") format("woff"),
-url("../webfonts/Junction.otf") format("opentype"),
-url("../webfonts/Junction.svg#filename") format("svg");
+src: url("../webfonts/Junction-regular.eot");
+src: url("../webfonts/Junction-regular.woff") format("woff"),
+url("../webfonts/Junction-regular.otf") format("opentype"),
+url("../webfonts/Junction-regular.svg#filename") format("svg");
+font-weight: 400;
+font-style: normal;
+}
+
+@font-face {
+font-family: "Junction";
+src: url("../webfonts/Junction-bold.eot");
+src: url("../webfonts/Junction-bold.woff") format("woff"),
+url("../webfonts/Junction-bold.otf") format("opentype"),
+url("../webfonts/Junction-bold.svg#filename") format("svg");
+font-weight: 700;
+font-style: normal;
+}
+
+@font-face {
+font-family: "Junction";
+src: url("../webfonts/Junction-light.eot");
+src: url("../webfonts/Junction-light.woff") format("woff"),
+url("../webfonts/Junction-light.otf") format("opentype"),
+url("../webfonts/Junction-light.svg#filename") format("svg");
+font-weight: 300;
+font-style: normal;
 }
 /* grid setup */
 
@@ -51,13 +73,13 @@ url("../webfonts/Junction.svg#filename") format("svg");
 
 a{
   color: #4C21E8;
-  font-weight: bolder;
+  font-weight: 700;
   text-decoration:none;
 }
 
 a:visited{
   color: #623CEA;
-  font-weight: bolder;
+  font-weight: 700;
 }
 
 a:hover{
@@ -178,7 +200,7 @@ footer {
 }
 
 a {
-  font-weight: bold;
+  font-weight: 700;
 }
 
 /* mobile */
@@ -347,7 +369,7 @@ text-align: right;
   margin-right: 4px;
   margin-bottom: 5vh;
   color: #2C2C34;
-  font-weight: normal;
+  font-weight: 400;
   cursor: pointer;
   font-size: 0.7rem;
   text-transform: uppercase;
