@@ -12,17 +12,17 @@
       <div class="container-1">
       <nav>Deepthi Gopal</nav>
       <div id="content1" class="cool">
-        <span>Hello! I'm a linguist, interested in theoretical phonology and in the spatial and temporal dimensions of language change. Starting in September 2021, I'm a postdoctoral fellow at <a href="https://www.lingfil.uu.se/">Uppsala University</a>.</span></div>
+        <span><a id="greeting" href="#" onclick="change_greeting();">Hello</a>! I'm a linguist, interested in theoretical phonology and in the spatial and temporal dimensions of language change. Starting in September 2021, I'm a postdoctoral fellow at <a href="https://www.lingfil.uu.se/">Uppsala University</a>.</span></div>
       <div id="content2"></div>
-      <div id="content3">Previously: I was at the <a href="https://www.mmll.cam.ac.uk/dtal">University of Cambridge</a> from 2017–2021, as a postdoctoral researcher on the ESRC-funded '<i><a href='http://www.tweetolectology.com'>Tweetolectology</a></i>' project and as a teaching associate in language typology. I have a PhD (2018) and MA (2014) in Linguistics from the University of Manchester, and a BS in Physics (2012) from the California Institute of Technology.</div>
+      <div id="content3">Previously: I was at the <a href="https://www.mmll.cam.ac.uk/dtal">University of Cambridge</a> from 2017–2021, as a postdoctoral researcher on the ESRC-funded ‘<i><a href='http://www.tweetolectology.com'>Tweetolectology</a></i>’ project and as a teaching associate in language typology. I have a PhD (2018) and MA (2014) in Linguistics from the University of Manchester, and a BS in Physics (2012) from the California Institute of Technology.</div>
       </div>
     <main>
        <div class='profile-section'>
           <button class='accordion'>+ Research interests</button>
           <div class='panel'>
-             <p id='description'>I'm interested in various phonological topics (the formation of active classes, the development of phonological rules, sonorant phonology, local and long-distance consonant interactions, the formal structure of phonological representations) and in mathematical models of language change and dialect geography. Uniting these, one of my major current directions is the relationship between geographically-sensitive variation in the structure of related phonological rules and the diachronic pathway of phonologisation. </p>
+             <p id='description'>I work on various phonological topics (the formation of active classes, the development of phonological rules, sonorant phonology, local and long-distance consonant interactions, the formal structure of phonological representations) and on mathematical models of language change and dialect geography. Uniting these, one of my major current directions is the relationship between geographically-sensitive variation in the structure of related phonological rules and the diachronic pathway of phonologisation. </p>
              <p id='description'>My PhD thesis, <i><a href='https://www.research.manchester.ac.uk/portal/en/theses/similarity-and-representations-in-sonorant-phonology(63464927-8f6b-414f-b343-d16328eb2911).html'>Similarity and representations in sonorant phonology</a></i> (December 2018) was supervised by <a href='https://ykimling.wordpress.com/'>Yuni Kim</a> and <a href='http://www.bermudez-otero.com/'>Ricardo Bermúdez-Otero</a>. The title was a little misleading; the thesis deals with the nature of class formation and phonologisation in synchrony and diachrony, and with the role that parameters like similarity can play in the organisation of processes of analogical generalisation. There's also a subsidiary focus therein on the Turkic languages, in which I have a particular interest. Any day now, I will definitely get around to publishing the individual chapters as papers, but in the meantime you're welcome to read the whole thing, or get in touch if you want to know more.</p>
-             <p id='description'>I maintain an affiliation with the ESRC-funded project <i><a href='http://www.tweetolectology.com'>Investigating the diffusion of morphosyntactic innovations using social media (‘Tweetolectology’)</a></i>, on which I was the RA 2017–2020, with <a href='http://people.ds.cam.ac.uk/dwew2/index.htm'>David Willis</a>, <a href='https://sites.google.com/site/adrianleemann/'>Adrian Leemann</a>, and <a href='http://www.mml.cam.ac.uk/ttb26'>Tamsin Blaxter</a>. Our interest is in the spatial patterning of morphosyntactic variation in British English, Welsh, Norwegian-Swedish-Danish, and Turkish; we're building large, geographically-rich corpora of Twitter posts in those languages, and using them to answer questions about diachrony and diffusion.<br></p>
+             <p id='description'>I maintain an involvement with the ESRC-funded project <i><a href='http://www.tweetolectology.com'>Investigating the diffusion of morphosyntactic innovations using social media (‘Tweetolectology’)</a></i>, on which I was the RA 2017–2020, with <a href='http://people.ds.cam.ac.uk/dwew2/index.htm'>David Willis</a>, <a href='https://sites.google.com/site/adrianleemann/'>Adrian Leemann</a>, and <a href='http://www.mml.cam.ac.uk/ttb26'>Tamsin Blaxter</a>. Our interest is in the spatial patterning of morphosyntactic variation in British English, Welsh, Norwegian-Swedish-Danish, and Turkish; we're building large, geographically-rich corpora of Twitter posts in those languages, and using them to answer questions about diachrony and diffusion.<br></p>
           </div>
        </div>
        <div class='profile-section'>
@@ -433,6 +433,16 @@ $(function() {
         $('div').removeClass("bigcontainer");
     }
 })
+
+var greet = 0;
+function change_greeting(){
+    var items = ['Hello', 'Hej'];
+    var n = items.length
+    greet = (greet + 1)
+    greet = ((greet % n) + n) % n
+    var item = items[greet];
+    document.getElementById("greeting").innerHTML = item;
+}
 </script>
 
 </html>
