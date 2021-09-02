@@ -427,6 +427,12 @@ let btn = document.querySelector('.cool');
   btn.style.setProperty('--x', x + 'px');
   btn.style.setProperty('--y', y + 'px');
 });
+
+$(function() {
+    if($('body').width() < 600) {
+        $('div').removeClass("bigcontainer");
+    }
+})
 </script>
 
 </html>
