@@ -10,10 +10,10 @@ src: url("~/assets/webfonts/Junction.eot");
 src: url("~/assets/webfonts/Junction.woff") format("woff"),
 url("~/assets/webfonts/Junction.otf") format("opentype"),
 url("~/assets/webfonts/Junction.svg#filename") format("svg");
-
+}
 /* grid setup */
 
-.bigcontainer{
+.bigcontainer {
   margin-left:5vw;
   margin-right:5vw;
   width:90vw;
@@ -183,15 +183,15 @@ a {
 
 /* mobile */
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 600px) {
   .container-1 {
     grid-template-columns: 1fr;
     grid-template-rows:auto;
     grid-template-areas:
       "nav"
       "content1"
-      "content2"
       "content3"
+      "content2"
   }
   .container-2 {
     grid-template-columns: 1fr;
