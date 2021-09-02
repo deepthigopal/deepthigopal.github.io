@@ -6,10 +6,10 @@
 
 @font-face {
 font-family: "Junction";
-src: url("~/assets/webfonts/Junction.eot");
-src: url("~/assets/webfonts/Junction.woff") format("woff"),
-url("~/assets/webfonts/Junction.otf") format("opentype"),
-url("~/assets/webfonts/Junction.svg#filename") format("svg");
+src: url("../webfonts/Junction.eot");
+src: url("../webfonts/Junction.woff") format("woff"),
+url("../webfonts/Junction.otf") format("opentype"),
+url("../webfonts/Junction.svg#filename") format("svg");
 }
 /* grid setup */
 
@@ -101,7 +101,7 @@ hr {
 }
 
 body {
-  font-family: "Junction";
+  font-family: "Junction","Helvetica","Arial",sans-serif;
   font-size: 12pt;
   line-height: 1.4em;
   background: #F5F1F9;
@@ -206,7 +206,7 @@ a {
 /* accordion setup */
 
 .accordion {
-  font-family: "Junction";
+  font-family:  "Junction","Helvetica","Arial",sans-serif;
   line-height: 1.4em;
   border-top: 1px solid #000;
   padding: 1em;
