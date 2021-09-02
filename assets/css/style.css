@@ -347,5 +347,5 @@ text-align: right;
 }
 
 .filter.is-checked {
-	background: linear-gradient(90deg, #F9E398, 90%, #623CEA);
+	background: #F9E398;
 }
