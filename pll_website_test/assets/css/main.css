@@ -64,6 +64,7 @@ Sidebar
     background-color: #f1f9f3;
     font-size: 18pt;
     display: block;
+    cursor:pointer;
 }
 
 .sidebar .name {
@@ -71,7 +72,7 @@ Sidebar
     font-family: "Roboto Mono", monospace;
     line-height: 24pt;
     letter-spacing: -0.05em;
-    padding-top: 8vh;
+    padding-top: 6vh;
     text-transform: uppercase;
     padding-bottom: 1vh;
     font-size: 28pt;
@@ -81,14 +82,14 @@ Sidebar
 }
 
 .sidebar .name:hover {
-    letter-spacing: 0.2em;
+    letter-spacing: 0.1em;
 }
 
 .sidebar .bottoms-up {
     padding-top: 2vh;
     border-bottom: 4px solid #14281d;
     position: absolute;
-    bottom: 1.5vh;
+    bottom: 1.7vh;
     left: 0;
     right: 0;
     padding-bottom: 1vh;
@@ -286,7 +287,7 @@ Publication styling.
 .publication{
   padding:3vh;
   border-right: 1px dotted #acc3b9;
-  border-top: 1px dotted #acc3b9;
+  border-bottom: 1px dotted #acc3b9;
   -moz-transition: all 0.2s ease-in-out;
   -webkit-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
@@ -316,7 +317,8 @@ Grid toggle formatting
   text-align: right;
   padding: 1vh;
   transition: all 0.5s ease;
-  padding-right: 3vh;}
+  padding-right: 3vh;
+}
 
 .angled::before{
   background: linear-gradient(#14281d, #14281d) no-repeat 2% 50%/3px 100%;
@@ -336,6 +338,7 @@ Grid toggle formatting
 
 .angled {
   width:98%;
+  border-bottom: 1px dotted #acc3b9;
 }
 
 .angled .controls{
@@ -381,6 +384,11 @@ Grid toggle formatting
 }
 
 .publication-title{
+  font-size:12pt;
+  padding-bottom:3pt;
+}
+
+.publication-title-noarxiv{
   font-size:12pt;
   padding-bottom:3pt;
 }

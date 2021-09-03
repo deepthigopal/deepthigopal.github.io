@@ -1,257 +1,263 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <meta charset='utf-8' />
-      <title>Peter LeFanu Lumsdaine</title>
-      <style type='text/css' media='all'>
-         @import url('assets/css/main.css');
-         @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,400;1,500&family=Roboto+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-      </style>
-      <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-      <script src="https://use.fontawesome.com/622bfe4c4f.js"></script>
-   </head>
-   <body>
-      <div class='sidebar'>
-         <div class='sidebar-item'></div>
-         <div class='sidebar-item name'>Peter<br> LeFanu<br> Lumsdaine</div>
-         <div class='sidebar-item'><a>Home</a></div>
-         <div class='sidebar-item'>
-            <div class='sidebar-selected'>Publications</div>
-         </div>
-         <div class='sidebar-item'><a>Presentations</a></div>
-         <div class='sidebar-item'><a>Teaching</a></div>
-         <div class='sidebar-item'></div>
-         <div class='sidebar-item bottoms-up'>
-            contact me:<br><br><span class='email'><a href='ma&#105;l&#116;o&#58;p&#46;&#108;&#46;lu%6D%73da&#105;n%65&#64;ma&#37;74h%2E%73&#117;&#46;se'>p&#46;&#108;&#46;lumsda&#105;ne&#64;mat&#104;&#46;s&#117;&#46;se</a></span>
-            <hr>
-            <div class='last-updated'>Last updated 3 September 2021.</div>
-         </div>
-      </div>
-      <div class='body-container'>
-         <div id='sticky-header' class='main-head'>Publications</div>
-         <div id='body-content'>
-         <div id='grid-toggle-wrapper' class='angled'>
-           <div class='controls'>
-             <a class='toggle-grid' href="#"><i class="fa fa-th-large toggle-grid"></i></a>
-             <a class='toggle-list' href="#"><i class="fa fa-list toggle-list"></i></a>
-           </div>
-         </div>
-         <!-- <div class='this-blurb'>My research lies broadly in category theory, logic, & constructive mathematics. Most of my recent work is within or related to the Homotopy Type Theory/<a>Univalent Foundations</a> programme: developing dependent type theory as a foundation for mathematics, drawing on ideas from homotopy theory & higher category theory.
-            I am also interested in quantum programming languages (I worked on the early stages of <a href='https://www.mathstat.dal.ca/~selinger/quipper/'>Quipper</a>) & mathematical computing.</div>
-            <div class='sub-head'>Publications</div> -->
-
-         <div id='this-inventory' class='this-list'>
-            <div class='publication'>
-               <div class='publication-title'>Homotopical inverse diagrams in categories with attributes</div>
-               <div class='publication-authors'>Krzysztof Kapulkin & Peter LeFanu Lumsdaine</div>
-               <div class='publication-status'>Submitted.</div>
-               <div class='publication-arxiv'>1808.01816</div>
-               <div class='abstract'>
-               </div>
+    <head>
+        <meta charset='utf-8' />
+        <title>Peter LeFanu Lumsdaine</title>
+        <style type='text/css' media='all'>
+            @import url('assets/css/main.css');
+            @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,400;1,500&family=Roboto+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+        </style>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://use.fontawesome.com/622bfe4c4f.js"></script>
+        <script src="./assets/js/toggle-grid.js"></script>
+    </head>
+    <body>
+        <div class='sidebar'>
+            <div class='sidebar-item'></div>
+            <div class='sidebar-item name'>Peter<br> LeFanu<br> Lumsdaine</div>
+            <div class='sidebar-item'><a>Home</a></div>
+            <div class='sidebar-item'>
+                <div class='sidebar-selected'>Publications</div>
             </div>
-            <div class='publication'>
-               <div class='publication-title'>Semantics of higher inductive types</div>
-               <div class='publication-authors'>Peter LeFanu Lumsdaine & Michael Shulman</div>
-               <div class='publication-status'>To appear in <i>Mathematical
-                  Proceedings of the Cambridge Philosophical Society</i>
-               </div>
-               <div class='publication-year'>2020</div>
-               <div class='publication-arxiv'>1705.07088</div>
-               <div class='publication-doi'>10.1017/S030500411900015X</div>
+            <div class='sidebar-item'><a>Presentations</a></div>
+            <div class='sidebar-item'><a>Teaching</a></div>
+            <div class='sidebar-item'></div>
+            <div class='sidebar-item bottoms-up'>
+                contact me:<br><span class='email'><a href='ma&#105;l&#116;o&#58;p&#46;&#108;&#46;lu%6D%73da&#105;n%65&#64;ma&#37;74h%2E%73&#117;&#46;se'>p&#46;&#108;&#46;lumsda&#105;ne&#64;mat&#104;&#46;s&#117;&#46;se</a></span>
+                <hr>
+                <div class='last-updated'>Last updated 3 September 2021.</div>
             </div>
-            <div class='publication'>
-               <div class='publication-title'>The simplicial model of univalent foundations (after Voevodsky)</div>
-               <div class='publication-authors'>Krzysztof Kapulkin & Peter LeFanu Lumsdaine</div>
-               <div class='publication-status'>To appear in <i>Journal of the European Mathematical Society</i></div>
-               <div class='publication-year'>2020</div>
-               <div class='publication-arxiv'>1211.2851</div>
+        </div>
+        <div class='body-container'>
+            <div id='sticky-header' class='main-head'>Publications</div>
+            <div id='body-content'>
+                <div id='grid-toggle-wrapper' class='angled'>
+                    <div class='controls'>
+                        <a class='toggle-grid' href="#"><i class="fa fa-th-large toggle-grid"></i></a>
+                        <a class='toggle-list' href="#"><i class="fa fa-list toggle-list"></i></a>
+                    </div>
+                </div>
+                <!-- <div class='this-blurb'>My research lies broadly in category theory, logic, & constructive mathematics. Most of my recent work is within or related to the Homotopy Type Theory/<a>Univalent Foundations</a> programme: developing dependent type theory as a foundation for mathematics, drawing on ideas from homotopy theory & higher category theory.
+                    I am also interested in quantum programming languages (I worked on the early stages of <a href='https://www.mathstat.dal.ca/~selinger/quipper/'>Quipper</a>) & mathematical computing.</div>
+                    <div class='sub-head'>Publications</div> -->
+                <div id='this-inventory' class='this-list'>
+                    <!-- Use class publication-title-noarxiv to prevent automated arxiv linking!  -->
+                    <div class='publication'>
+                        <div class='publication-title'>Homotopical inverse diagrams in categories with attributes</div>
+                        <div class='publication-authors'>Krzysztof Kapulkin & Peter LeFanu Lumsdaine</div>
+                        <div class='publication-status'>Submitted.</div>
+                        <div class='publication-arxiv'>1808.01816</div>
+                        <div class='abstract'>
+                        </div>
+                    </div>
+                    <div class='publication'>
+                        <div class='publication-title'>Semantics of higher inductive types</div>
+                        <div class='publication-authors'>Peter LeFanu Lumsdaine & Michael Shulman</div>
+                        <div class='publication-status'>To appear in <i>Mathematical
+                            Proceedings of the Cambridge Philosophical Society</i>
+                        </div>
+                        <div class='publication-year'>2020</div>
+                        <div class='publication-arxiv'>1705.07088</div>
+                        <div class='publication-doi'>10.1017/S030500411900015X</div>
+                    </div>
+                    <div class='publication'>
+                        <div class='publication-title'>The simplicial model of univalent foundations (after Voevodsky)</div>
+                        <div class='publication-authors'>Krzysztof Kapulkin & Peter LeFanu Lumsdaine</div>
+                        <div class='publication-status'>To appear in <i>Journal of the European Mathematical Society</i></div>
+                        <div class='publication-year'>2020</div>
+                        <div class='publication-arxiv'>1211.2851</div>
+                    </div>
+                    <div class='publication'>
+                        <div class='publication-title'>Constructive reflection principles for regular theories</div>
+                        <div class='publication-authors'>Henrik Forssell & Peter LeFanu Lumsdaine</div>
+                        <div class='publication-status'>To appear in <i>Journal of Symbolic Logic</i></div>
+                        <div class='publication-year'>2020</div>
+                        <div class='publication-arxiv'>1604.03851</div>
+                        <div class='publication-doi'>10.1017/jsl.2019.70</div>
+                    </div>
+                    <div class='publication'>
+                        <div class='publication-title'>Displayed categories</div>
+                        <div class='publication-authors'>Benedikt Ahrens & Peter LeFanu Lumsdaine</div>
+                        <div class='publication-status'><i>Logical Methods in Computer Science, Vol. 15</i></div>
+                        <div class='publication-year'>2019</div>
+                        <div class='publication-arxiv'>1604.03851</div>
+                        <div class='publication-doi'>10.1017/jsl.2019.70</div>
+                        <div class='publication-supplementary'>Conference version: 2nd International Conference on Formal Structures for Computation & Deduction (FSCD 2017), ed. D. Michael Miller, LIPIcs 84. doi:<a href='https://doi.org/10.4230/LIPIcs.FSCD.2017.5'>10.4230/LIPIcs.FSCD.2017.5</a>; arXiv:<a href='https://arxiv.org/abs/1705.04296v2'>1705.04296v2</a></div>
+                    </div>
+                    <div class='publication'>
+                        <div class='publication-title'>The homotopy theory of type theories</div>
+                        <div class='publication-authors'>Krzysztof Kapulkin & Peter LeFanu Lumsdaine</div>
+                        <div class='publication-status'><i>Advances
+                            in Mathematics 337</i>
+                        </div>
+                        <div class='publication-year'>2019</div>
+                        <div class='publication-arxiv'>1610.00037</div>
+                        <div class='publication-doi'>10.1016/j.aim.2018.08.003</div>
+                    </div>
+                    <div class='publication'>
+                        <div class='publication-title'>Categorical structures for type theory in univalent foundations</div>
+                        <div class='publication-authors'>Benedikt Ahrens, Peter LeFanu Lumsdaine, & Vladimir Voevodsky</div>
+                        <div class='publication-status'><i>Logical Methods in Computer Science, Vol 14(3)</i></div>
+                        <div class='publication-year'>2018</div>
+                        <div class='publication-arxiv'>1705.04310</div>
+                        <div class='publication-doi'>10.1016/j.aim.2018.08.003</div>
+                        <div class='publication-supplementary'>Conference version: 26th EACSL Annual Conference on Computer Science Logic (CSL 2017), Ed. Valentin Goranko & Mads Dam. LIPIcs 82. doi:<a href='https://doi.org/10.4230/LIPIcs.CSL.2017.8'>10.4230/LIPIcs.CSL.2017.8</a>; arXiv:<a href='https://arxiv.org/abs/1705.04310'>1705.04310</a></div>
+                    </div>
+                    <div class='publication'>
+                        <div class='publication-title'>The HoTT Library: A formalization of homotopy type theory in Coq</div>
+                        <div class='publication-authors'>Andrej Bauer, Jason Gross, Peter LeFanu Lumsdaine, Michael Shulman, Matthieu Sozeau, & Bas Spitters</div>
+                        <div class='publication-status'><i>Proceedings of CPP 2017, ed. Yves Bertot & Viktor Vafeiadis, Association for Computing Machinery</i>
+                        </div>
+                        <div class='publication-year'>2017</div>
+                        <div class='publication-arxiv'>1610.04591</div>
+                        <div class='publication-doi'>10.1016/j.aim.2018.08.003</div>
+                    </div>
+                    <div class='publication'>
+                        <div class='publication-title'>Parametricity, automorphisms of the universe, & excluded middle</div>
+                        <div class='publication-authors'>Auke Bart Booij, Martín Hötzel Escardó, Peter LeFanu Lumsdaine, & Michael Shulman</div>
+                        <div class='publication-status'><i>Post-proceedings of TYPES 2016, LPIPcs 97, ed. Silvia Ghilezan,
+                            Herman Geuvers, & Jelena Ivetić.</i>
+                        </div>
+                        <div class='publication-year'>2016</div>
+                        <div class='publication-arxiv'>1701.05617</div>
+                        <div class='publication-doi'>10.1016/j.aim.2018.08.003</div>
+                    </div>
+                    <div class='publication'>
+                        <div class='publication-title'>A mechanization of the Blakers–Massey connectivity theorem in homotopy type theory</div>
+                        <div class='publication-authors'>Kuen-Bang Hou (Favonia), Eric Finster, Dan R. Licata, & Peter LeFanu Lumsdaine</div>
+                        <div class='publication-status'><i>Proceedings of LICS ’16.</i>
+                        </div>
+                        <div class='publication-year'>2016</div>
+                        <div class='publication-arxiv'>1605.03227</div>
+                        <div class='publication-doi'>10.1145/2933575.2934545</div>
+                    </div>
+                    <div class='publication'>
+                        <div class='publication-title'>The local universes model: an overlooked coherence construction for dependent type theories</div>
+                        <div class='publication-authors'>Peter LeFanu Lumsdaine & Michael A. Warren</div>
+                        <div class='publication-status'><i>Proceedings of LICS ’16.</i>
+                        </div>
+                        <div class='publication-year'>2016</div>
+                        <div class='publication-arxiv'>1411.1736</div>
+                        <div class='publication-doi'>10.1145/2754931</div>
+                    </div>
+                    <div class='publication'>
+                        <div class='publication-title'>Homotopy limits in type theory</div>
+                        <div class='publication-authors'>Jeremy Avigad, Krzysztof Kapulkin, & Peter LeFanu Lumsdaine</div>
+                        <div class='publication-status'><i>Mathematical Structures in Computer Science 25(5)</i>
+                        </div>
+                        <div class='publication-year'>2015</div>
+                        <div class='publication-arxiv'>1304.0680</div>
+                        <div class='publication-doi'>10.1017/S0960129514000498</div>
+                    </div>
+                    <div class='publication'>
+                        <div class='publication-title'>Quipper: A scalable quantum programming language</div>
+                        <div class='publication-authors'>Alexander S. Green, Peter LeFanu Lumsdaine, Neil J. Ross, Peter Selinger, Benoît Valiron</div>
+                        <div class='publication-status'><i>SIGPLAN Notices 48(6)</i>
+                        </div>
+                        <div class='publication-year'>2013</div>
+                        <div class='publication-arxiv'>1304.3390</div>
+                        <div class='publication-doi'>10.1145/2499370.2462177</div>
+                    </div>
+                    <div class='publication'>
+                        <div class='publication-title'>An introduction to quantum programming in Quipper</div>
+                        <div class='publication-authors'>Alexander S. Green, Peter LeFanu Lumsdaine, Neil J. Ross, Peter Selinger, Benoît Valiron</div>
+                        <div class='publication-status'>In <i>Reversible Computation, ed. Gerhard W. Dueck & D. Michael Miller. Springer LNCS 7948</i>
+                        </div>
+                        <div class='publication-year'>2013</div>
+                        <div class='publication-arxiv'>1304.5485</div>
+                        <div class='publication-doi'>10.1007/978-3-642-38986-3_10</div>
+                    </div>
+                    <div class='publication'>
+                        <div class='publication-title'>On the Bourbaki–Witt principle in toposes</div>
+                        <div class='publication-authors'>Andrej Bauer & Peter LeFanu Lumsdaine</div>
+                        <div class='publication-status'><i>Mathematical Proceedings of the Cambridge Philosophical Society 155</i>
+                        </div>
+                        <div class='publication-year'>2013</div>
+                        <div class='publication-arxiv'>1201.0340</div>
+                        <div class='publication-doi'>10.1017/S0305004113000108</div>
+                    </div>
+                    <div class='publication'>
+                        <div class='publication-title'>Homotopy type theory: Univalent foundations of mathematics (The HoTT Book)</div>
+                        <div class='publication-authors'>The Univalent Foundations Program (many-author collaboration)</div>
+                        <div class='publication-year'>2013</div>
+                        <div class='publication-status'><a href='https://homotopytypetheory.org/book'>Homepage</a></div>
+                    </div>
+                    <div class='publication'>
+                        <div class='publication-title'>Univalence in Simplicial Sets</div>
+                        <div class='publication-authors'>Krzysztof Kapulkin, Peter LeFanu Lumsdaine, & Vladimir Voevodsky</div>
+                        <div class='publication-status'>Unpublished note.</div>
+                        <div class='publication-year'>2012</div>
+                        <div class='publication-arxiv'>1203.2553</div>
+                    </div>
+                    <div class='publication'>
+                        <div class='publication-title-noarxiv'><a href='/research/Lumsdaine-Model-strux-from-HITs.pdf'>Model Structures from Higher Inductive Types</a></div>
+                        <div class='publication-authors'>Peter LeFanu Lumsdaine</div>
+                        <div class='publication-year'>2011</div>
+                        <div class='publication-status'>Unpublished note. <a href='/research/Lumsdaine-Model-strux-from-HITs.pdf'>Available here [pdf]</a>.</div>
+                    </div>
+                    <div class='publication'>
+                        <div class='publication-title'>A small observation on co-categories</div>
+                        <div class='publication-authors'>Peter LeFanu Lumsdaine</div>
+                        <div class='publication-status'><i>Theory & Applications of
+                            Categories 25(9)</i>
+                        </div>
+                        <div class='publication-year'>2011</div>
+                        <div class='publication-arxiv'>0902.4743</div>
+                        <div class='publication-status'><a href='http://www.tac.mta.ca/tac/volumes/25/9/25-09abs.html'>Journal page</a>.</div>
+                    </div>
+                    <div class='publication'>
+                        <div class='publication-title-noarxiv'><a href='/research/Lumsdaine-2010-Thesis.pdf'>Higher Categories from Type Theories</a></div>
+                        <div class='publication-authors'>Peter LeFanu Lumsdaine</div>
+                        <div class='publication-status'><b>PhD thesis</b>, Carnegie Mellon University.
+                        </div>
+                        <div class='publication-year'>2010</div>
+                    </div>
+                    <div class='publication'>
+                        <div class='publication-title'>Weak ω-categories from intensional type theory</div>
+                        <div class='publication-authors'>Peter LeFanu Lumsdaine</div>
+                        <div class='publication-status'>Logical Methods
+                            in Computer Science 6(3)
+                        </div>
+                        <div class='publication-year'>2010</div>
+                        <div class='publication-arxiv'>0812.0409v4</div>
+                        <div class='publication-doi'>10.2168/LMCS-6(3:24)2010</div>
+                        <div class='publication-supplementary'>Conference version: Typed Lambda Calculi & Applications 2009, Springer LNCS 5608. doi:<a href='https://doi.org/10.1007/978-3-642-02273-9_14'>10.1007/978-3-642-02273-9_14</a></div>
+                    </div>
+                    <div class='publication'>
+                        <div class='publication-title'>Lawvere–Tierney sheaves in Algebraic Set Theory</div>
+                        <div class='publication-authors'>Steve Awodey, Nicola Gambino, Peter LeFanu Lumsdaine, & Michael A. Warren.</div>
+                        <div class='publication-status'><i>Journal of Symbolic Logic 74.3</i>
+                        </div>
+                        <div class='publication-year'>2009</div>
+                        <div class='publication-arxiv'>0711.1529</div>
+                        <div class='publication-doi'>10.2178/jsl/1245158088</div>
+                    </div>
+                </div>
             </div>
-            <div class='publication'>
-               <div class='publication-title'>Constructive reflection principles for regular theories</div>
-               <div class='publication-authors'>Henrik Forssell & Peter LeFanu Lumsdaine</div>
-               <div class='publication-status'>To appear in <i>Journal of Symbolic Logic</i></div>
-               <div class='publication-year'>2020</div>
-               <div class='publication-arxiv'>1604.03851</div>
-               <div class='publication-doi'>10.1017/jsl.2019.70</div>
-            </div>
-            <div class='publication'>
-               <div class='publication-title'>Displayed categories</div>
-               <div class='publication-authors'>Benedikt Ahrens & Peter LeFanu Lumsdaine</div>
-               <div class='publication-status'><i>Logical Methods in Computer Science, Vol. 15</i></div>
-               <div class='publication-year'>2019</div>
-               <div class='publication-arxiv'>1604.03851</div>
-               <div class='publication-doi'>10.1017/jsl.2019.70</div>
-               <div class='publication-supplementary'>Conference version: 2nd International Conference on Formal Structures for Computation & Deduction (FSCD 2017), ed. D. Michael Miller, LIPIcs 84. doi:<a href='https://doi.org/10.4230/LIPIcs.FSCD.2017.5'>10.4230/LIPIcs.FSCD.2017.5</a>; arXiv:<a href='https://arxiv.org/abs/1705.04296v2'>1705.04296v2</a></div>
-            </div>
-            <div class='publication'>
-               <div class='publication-title'>The homotopy theory of type theories</div>
-               <div class='publication-authors'>Krzysztof Kapulkin & Peter LeFanu Lumsdaine</div>
-               <div class='publication-status'><i>Advances
-                  in Mathematics 337</i>
-               </div>
-               <div class='publication-year'>2019</div>
-               <div class='publication-arxiv'>1610.00037</div>
-               <div class='publication-doi'>10.1016/j.aim.2018.08.003</div>
-            </div>
-            <div class='publication'>
-               <div class='publication-title'>Categorical structures for type theory in univalent foundations</div>
-               <div class='publication-authors'>Benedikt Ahrens, Peter LeFanu Lumsdaine, & Vladimir Voevodsky</div>
-               <div class='publication-status'><i>Logical Methods in Computer Science, Vol 14(3)</i></div>
-               <div class='publication-year'>2018</div>
-               <div class='publication-arxiv'>1705.04310</div>
-               <div class='publication-doi'>10.1016/j.aim.2018.08.003</div>
-               <div class='publication-supplementary'>Conference version: 26th EACSL Annual Conference on Computer Science Logic (CSL 2017), Ed. Valentin Goranko & Mads Dam. LIPIcs 82. doi:<a href='https://doi.org/10.4230/LIPIcs.CSL.2017.8'>10.4230/LIPIcs.CSL.2017.8</a>; arXiv:<a href='https://arxiv.org/abs/1705.04310'>1705.04310</a></div>
-            </div>
+        </div>
+    </body>
+    <footer>
+        <script>
+            $('.publication').each(function() {
+              var arxiv = $(this).children('div.publication-arxiv').html();
+              $(this).children('div.publication-title').contents().wrap('<a href="https://arxiv.org/abs/'+arxiv+'"></a>');
+            });
+        </script>
+        <script>
+            // JQuery: fill in arxiv & doi automatically, add arxiv link to titles
+            $('.publication-arxiv').each(function() {
+              var link = $(this).html();
+              $(this).contents().wrap('<a href="https://arxiv.org/abs/'+link+'"></a>');
+            });
 
-         <div class='publication'>
-            <div class='publication-title'>The HoTT Library: A formalization of homotopy type theory in Coq</div>
-            <div class='publication-authors'>Andrej Bauer, Jason Gross, Peter LeFanu Lumsdaine, Michael Shulman, Matthieu Sozeau, & Bas Spitters</div>
-            <div class='publication-status'><i>Proceedings of CPP 2017, ed. Yves Bertot & Viktor Vafeiadis, Association for Computing Machinery</i>
-            </div>
-            <div class='publication-year'>2017</div>
-            <div class='publication-arxiv'>1610.04591</div>
-            <div class='publication-doi'>10.1016/j.aim.2018.08.003</div>
-         </div>
-
-         <div class='publication'>
-            <div class='publication-title'>Parametricity, automorphisms of the universe, & excluded middle</div>
-            <div class='publication-authors'>Auke Bart Booij, Martín Hötzel Escardó, Peter LeFanu Lumsdaine, & Michael Shulman</div>
-            <div class='publication-status'><i>Post-proceedings of TYPES 2016, LPIPcs 97, ed. Silvia Ghilezan,
-               Herman Geuvers, & Jelena Ivetić.</i>
-            </div>
-            <div class='publication-year'>2016</div>
-            <div class='publication-arxiv'>1701.05617</div>
-            <div class='publication-doi'>10.1016/j.aim.2018.08.003</div>
-         </div>
-
-         <div class='publication'>
-            <div class='publication-title'>A mechanization of the Blakers–Massey connectivity theorem in homotopy type theory</div>
-            <div class='publication-authors'>Kuen-Bang Hou (Favonia), Eric Finster, Dan R. Licata, & Peter LeFanu Lumsdaine</div>
-            <div class='publication-status'><i>Proceedings of LICS ’16.</i>
-            </div>
-            <div class='publication-year'>2016</div>
-            <div class='publication-arxiv'>1605.03227</div>
-            <div class='publication-doi'>10.1145/2933575.2934545</div>
-         </div>
-
-         <div class='publication'>
-            <div class='publication-title'>The local universes model: an overlooked coherence construction for dependent type theories</div>
-            <div class='publication-authors'>Peter LeFanu Lumsdaine & Michael A. Warren</div>
-            <div class='publication-status'><i>Proceedings of LICS ’16.</i>
-            </div>
-            <div class='publication-year'>2016</div>
-            <div class='publication-arxiv'>1411.1736</div>
-            <div class='publication-doi'>10.1145/2754931</div>
-         </div>
-
-         <div class='publication'>
-            <div class='publication-title'>Homotopy limits in type theory</div>
-            <div class='publication-authors'>Jeremy Avigad, Krzysztof Kapulkin, & Peter LeFanu Lumsdaine</div>
-            <div class='publication-status'><i>Mathematical Structures in Computer Science 25(5)</i>
-            </div>
-            <div class='publication-year'>2015</div>
-            <div class='publication-arxiv'>1304.0680</div>
-            <div class='publication-doi'>10.1017/S0960129514000498</div>
-         </div>
-
-         <div class='publication'>
-            <div class='publication-title'>Quipper: A scalable quantum programming language</div>
-            <div class='publication-authors'>Alexander S. Green, Peter LeFanu Lumsdaine, Neil J. Ross, Peter Selinger, Benoît Valiron</div>
-            <div class='publication-status'><i>Mathematical Structures in Computer Science 25(5)</i>
-            </div>
-            <div class='publication-year'>2015</div>
-            <div class='publication-arxiv'>1304.3390</div>
-            <div class='publication-doi'>10.1017/S0960129514000498</div>
-         </div>
-      </div>
-         <!--
-
-            <li>
-            <p><strong>Quipper: A scalable quantum programming language</strong>, A. S. Green, P. LeF. Lumsdaine, N. J. Ross, P. Selinger, & B. Valiron. SIGPLAN Notices 48(6), June 2013. doi:<a href='https://doi.org/10.1145/2499370.2462177'>10.1145/2499370.2462177</a>; arXiv:<a href='https://arxiv.org/abs/1304.3390'>1304.3390</a></p>
-            </li>
-            <li>
-            <p><strong>An introduction to quantum programming in Quipper</strong>, A. S. Green, Peter LeFanu Lumsdaine, N. J. Ross, P. Selinger, & B. Valiron. In Reversible Computation, 2013, ed. Gerhard W. Dueck & D. Michael Miller. Springer LNCS 7948. doi:<a href='https://doi.org/10.1007/978-3-642-38986-3_10'>10.1007/978-3-642-38986-3_10</a>; arXiv:<a href='https://arxiv.org/abs/1304.5485'>1304.5485</a></p>
-            </li>
-            <li>
-            <p><strong>On the Bourbaki–Witt principle in toposes</strong>, Andrej Bauer & Peter LeFanu Lumsdaine.  Mathematical Proceedings of the Cambridge Philosophical Society 155, July 2013.  doi:<a href='https://doi.org/10.1017/S0305004113000108'>10.1017/S0305004113000108</a>; arXiv:<a href='https://arxiv.org/abs/1201.0340'>1201.0340</a></p>
-            </li>
-            <li>
-            <p><strong>Homotopy type theory: Univalent foundations of mathematics (The HoTT Book)</strong>, The Univalent Foundations Program (many-author collaboration), 2013.  <a href='https://homotopytypetheory.org/book'>Homepage</a></p>
-            </li>
-            <li>
-            <p><strong>Univalence in Simplicial Sets</strong>, Krzysztof Kapulkin, Peter LeFanu Lumsdaine, & Vladimir Voevodsky. Unpublished note, 2012.  arXiv:<a href='https://arxiv.org/abs/1203.2553'>1203.2553</a></p>
-            </li>
-            <li>
-            <p><strong>Model Structures from Higher Inductive Types</strong>, Peter LeFanu Lumsdaine.  Unpublished note, December 2011. <a href='/research/Lumsdaine-Model-strux-from-HITs.pdf'>pdf</a></p>
-            </li>
-            <li>
-            <p><strong>A small observation on co-categories</strong>, Peter LeFanu Lumsdaine. Theory & Applications of
-            Categories 25(9), 2011. arXiv:<a href='https://arxiv.org/abs/0902.4743'>0902.4743</a>; <a href='http://www.tac.mta.ca/tac/volumes/25/9/25-09abs.html'>journal page</a></p>
-            </li>
-            <li>
-            <p><strong>Higher Categories from Type Theories (PhD thesis)</strong>, Peter LeFanu Lumsdaine. Carnegie Mellon
-            University, 2010.  <a href='/research/Lumsdaine-2010-Thesis.pdf'>pdf</a></p>
-            </li>
-            <li>
-            <p><strong>Weak ω-categories from intensional type theory</strong>, Peter LeFanu Lumsdaine. Logical Methods
-            in Computer Science 6(3), 2010. doi:<a href='https://doi.org/10.2168/LMCS-6(3:24)2010'>10.2168/LMCS-6(3:24)2010</a>; arXiv:<a href='https://arxiv.org/abs/0812.0409v4'>0812.0409v4</a></p>
-
-            <p>Conference version: Typed Lambda Calculi & Applications 2009, Springer LNCS 5608. doi:<a href='https://doi.org/10.1007/978-3-642-02273-9_14'>10.1007/978-3-642-02273-9_14</a></p>
-            </li>
-            <li>
-            <p><strong>Lawvere–Tierney sheaves in Algebraic Set Theory</strong>, Steve Awodey, Nicola Gambino, Peter LeFanu Lumsdaine, & Michael A. Warren.  Journal of Symbolic Logic 74.3, September 2009. doi:<a href='https://doi.org/10.2178/jsl/1245158088'>10.2178/jsl/1245158088</a>; arXiv:<a href='https://arxiv.org/abs/0711.1529'>0711.1529</a></p>
-            </li>
-            </ul></div> -->
-      </div>
-      </div>
-    </div>
-   </body>
-   <footer>
-      <script>
-         $('.publication').each(function() {
-           var arxiv = $(this).children('div.publication-arxiv').html();
-           $(this).children('div.publication-title').contents().wrap('<a href="https://arxiv.org/abs/'+arxiv+'"></a>');
-         });
-      </script>
-      <script>
-      // JQuery: fill in arxiv & doi automatically, add arxiv link to titles
-      $('.publication-arxiv').each(function() {
-        var link = $(this).html();
-        $(this).contents().wrap('<a href="https://arxiv.org/abs/'+link+'"></a>');
-      });
-
-      $('.publication-doi').each(function() {
-        var link = $(this).html();
-        $(this).contents().wrap('<a href="https://doi.org/'+link+'"></a>');
-      });</script>
-<script>
-      var wrapper = document.getElementById("this-inventory");
-      var style = document.getElementById("grid-toggle-wrapper");
-
-      document.addEventListener("click", function (event) {
-        if (!event.target.matches(".toggle-list")) return;
-
-        // List view
-        event.preventDefault();
-        wrapper.classList.add("this-list");
-        wrapper.classList.remove("this-grid");
-        style.classList.add("angled");
-        style.classList.remove("straight");
-      });
-
-      document.addEventListener("click", function (event) {
-        if (!event.target.matches(".toggle-grid")) return;
-
-        // List view
-        event.preventDefault();
-        wrapper.classList.add("this-grid");
-        wrapper.classList.remove("this-list");
-        style.classList.add("straight");
-        style.classList.remove("angled");
-});</script>
-<script>
-var height = document.getElementById("sticky-header").offsetHeight;
-document.getElementById("body-content").style.marginTop = height + 'px';
-</script>
-   </footer>
+            $('.publication-doi').each(function() {
+              var link = $(this).html();
+              $(this).contents().wrap('<a href="https://doi.org/'+link+'"></a>');
+            });
+        </script>
+        <script>
+            var height = document.getElementById("sticky-header").offsetHeight;
+            document.getElementById("body-content").style.marginTop = height + 'px';
+        </script>
+    </footer>
 </html>
