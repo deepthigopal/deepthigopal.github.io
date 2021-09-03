@@ -153,14 +153,13 @@ nav {
 }
 
 main {
-  border-left: 1px solid #000;
-  border-right: 1px solid black;
   padding: 0;
 }
 
 #content1 {
   border-top: 1px solid #000;
   border-left: 1px solid #000;
+  border-bottom: 1px solid #000;
   font-size: 14pt;
   grid-area: content1;
   background-color: #EBE2F3;
@@ -170,6 +169,7 @@ main {
 #content2 {
   border-top: 1px solid #000;
   border-left: 1px solid #000;
+  border-bottom: 1px solid #000;
   background-color: #F0EAF6;
   grid-area: content2;
   padding: var(--main-padding);
@@ -178,6 +178,7 @@ main {
 #content3 {
   border-top: 1px solid #000;
   border-left: 1px solid #000;
+  border-bottom: 1px solid #000;
   border-right: 1px solid black;
   grid-area: content3;
   padding: var(--main-padding);
@@ -241,14 +242,13 @@ a {
 
 .accordion {
   font-family:  "Junction","Helvetica","Arial",sans-serif;
-  line-height: 1.4em;
-  border-top: 1px solid #000;
+  line-height: 1.2em;
+  margin-top: -1px;
+  margin-bottom: -1px;
+  border: 1px solid #000;
   padding: 1em;
   width: 100%;
   display:block;
-  border-left: none;
-  border-right: none;
-  border-bottom: none;
   font-size: 1em;
   background: #F5F1F9;
   text-align: justify;
@@ -262,14 +262,14 @@ a {
 
 .accordion-left:hover {
     background-color: #EBE2F3;
-    transform: skewx(-10deg);
+    transform: skewx(-15deg);
     border-left: 1px solid black;
     border-right: 1px solid black;
 }
 
 .accordion-right:hover {
     background-color: #EBE2F3;
-    transform: skewx(10deg);
+    transform: skewx(15deg);
     border-left: 1px solid black;
     border-right: 1px solid black;
 }
@@ -278,7 +278,8 @@ a {
   display:block;
   transition: opacity 1s;
   transition: height 1s;
-  border-top: 1px dashed #4C21E8;
+  border-left: 1px dashed #4C21E8;
+  border-right: 1px dashed #4C21E8;
   padding: var(--main-padding);
 }
 
@@ -381,6 +382,7 @@ text-align: right;
 .filter-nav .button-group.filters-button-group {
     display: flex;
     justify-content: space-between;
+    transform: none;
 }
 
 .filterable{
@@ -400,6 +402,7 @@ text-align: right;
   cursor: pointer;
   font-size: 0.7rem;
   text-transform: uppercase;
+  transform: none;
 }
 
 .filter.is-checked {
