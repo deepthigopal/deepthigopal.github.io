@@ -29,7 +29,12 @@
       </div>
       <div class='body-text'>
          <div class='main-head'>Publications</div>
-         <div class='grid-toggle'><a class='toggle-grid' href="#"><i class="fa fa-th-large toggle-grid"></i></a> <a class='toggle-list' href="#"><i class="fa fa-list toggle-list"></i></a></div>
+         <div id='grid-toggle-wrapper' class='angled'>
+           <div class='controls'>
+             <a class='toggle-grid' href="#"><i class="fa fa-th-large toggle-grid"></i></a>
+             <a class='toggle-list' href="#"><i class="fa fa-list toggle-list"></i></a>
+           </div>
+         </div>
          <!-- <div class='this-blurb'>My research lies broadly in category theory, logic, and constructive mathematics. Most of my recent work is within or related to the Homotopy Type Theory/<a>Univalent Foundations</a> programme: developing dependent type theory as a foundation for mathematics, drawing on ideas from homotopy theory and higher category theory.
             I am also interested in quantum programming languages (I worked on the early stages of <a href='https://www.mathstat.dal.ca/~selinger/quipper/'>Quipper</a>) and mathematical computing.</div>
             <div class='sub-head'>Publications</div> -->
@@ -116,12 +121,19 @@
             <div class='publication-arxiv'>1701.05617</div>
             <div class='publication-doi'>10.1016/j.aim.2018.08.003</div>
          </div>
+
+         <div class='publication'>
+            <div class='publication-title'>A mechanization of the Blakers–Massey connectivity theorem in homotopy type theory</div>
+            <div class='publication-authors'>Kuen-Bang Hou (Favonia), Eric Finster, Dan R. Licata, & Peter LeFanu Lumsdaine</div>
+            <div class='publication-status'><i>Proceedings of LICS ’16.</i>
+            </div>
+            <div class='publication-year'>2016</div>
+            <div class='publication-arxiv'>1605.03227</div>
+            <div class='publication-doi'>10.1145/2933575.2934545</div>
+         </div>
       </div>
          <!--
 
-            <li>
-            <p><strong>The HoTT Library: A formalization of homotopy type theory in Coq</strong>, A. Bauer, J. Gross, P. LeF. Lumsdaine, M. Shulman, M. Sozeau, and B. Spitters. In Proceedings of CPP 2017, ed. Yves Bertot and Viktor Vafeiadis, Association for Computing Machinery, 2017. doi:<a href='https://doi.org/10.1145/3018610.3018615'>10.1145/3018610.3018615</a>; arXiv:<a href='https://arxiv.org/abs/1610.04591'>1610.04591</a></p>
-            </li>
             <li>
             <p><strong>A mechanization of the Blakers–Massey connectivity theorem in homotopy type theory</strong>, Kuen-Bang Hou (Favonia), Eric Finster, Dan R. Licata, and Peter LeFanu Lumsdaine. Proceedings of LICS ’16. doi:<a href='https://doi.org/10.1145/2933575.2934545'>10.1145/2933575.2934545</a>; arXiv:<a href='https://arxiv.org/abs/1605.03227'>1605.03227</a></p>
             </li>
@@ -190,6 +202,7 @@
       });</script>
 <script>
       var wrapper = document.getElementById("this-inventory");
+      var style = document.getElementById("grid-toggle-wrapper");
 
       document.addEventListener("click", function (event) {
         if (!event.target.matches(".toggle-list")) return;
@@ -198,6 +211,8 @@
         event.preventDefault();
         wrapper.classList.add("this-list");
         wrapper.classList.remove("this-grid");
+        style.classList.add("angled");
+        style.classList.remove("straight");
       });
 
       document.addEventListener("click", function (event) {
@@ -207,6 +222,8 @@
         event.preventDefault();
         wrapper.classList.add("this-grid");
         wrapper.classList.remove("this-list");
+        style.classList.add("straight");
+        style.classList.remove("angled");
 });</script>
    </footer>
 </html>
