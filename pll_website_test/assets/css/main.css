@@ -181,10 +181,11 @@ Body
     border-bottom: 3px solid #14281d;
 }
 
-.this-blurb {
-    padding: 5vh;
+.body-misc {
+    padding: 1vh;
+    padding-left: 5vh;
     font-size: 14pt;
-    border-bottom: 4px solid #14281d;
+    border-bottom: 1px solid #14281d;
 }
 
 
@@ -236,20 +237,37 @@ html {
 Publication styling.
 */
 
-.this-inventory {
-    padding: 0vh;
-    font-size: 12pt;
-    border-bottom: 2px solid #14281d;
-}
-
-.this-inventory {
+.this-grid {
+  padding: 0vh;
+  font-size: 12pt;
+  border-bottom: 2px solid #14281d;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
   grid-gap: 0rem;
   row-gap: 0rem;
   overflow-y: hidden;
+  -moz-transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
 }
+
+.this-list {
+  padding: 0vh;
+  font-size: 12pt;
+  border-bottom: 2px solid #14281d;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 0rem;
+  row-gap: 0rem;
+  overflow-y: hidden;
+  -moz-transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+} 
 
 .publication{
   padding:3vh;
@@ -272,7 +290,7 @@ Publication styling.
 
 .publication-authors{
   font-size:12pt;
-  font-family: 'Goudy Bookletter 1911';
+  font-family: 'Goudy Bookletter 1911','Sorts Mill Goudy',serif;
   line-height: 12pt;
   padding-bottom:4pt;
 }

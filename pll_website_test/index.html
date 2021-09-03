@@ -5,7 +5,7 @@
       <title>Peter LeFanu Lumsdaine</title>
       <style type='text/css' media='all'>
          @import url('assets/css/main.css');
-         @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&family=Roboto+Mono:ital@0;1&display=swap');
+         @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,400;1,500&family=Roboto+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
       </style>
       <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
    </head>
@@ -28,10 +28,12 @@
       </div>
       <div class='body-text'>
          <div class='main-head'>Publications</div>
+         <div class='body-misc'></div>
+         <div class='body-misc'><a class='toggle-grid' href="#">VIEW AS GRID</a> &times; <a class='toggle-list' href="#">VIEW AS LIST</a> </div>
          <!-- <div class='this-blurb'>My research lies broadly in category theory, logic, and constructive mathematics. Most of my recent work is within or related to the Homotopy Type Theory/<a>Univalent Foundations</a> programme: developing dependent type theory as a foundation for mathematics, drawing on ideas from homotopy theory and higher category theory.
             I am also interested in quantum programming languages (I worked on the early stages of <a href='https://www.mathstat.dal.ca/~selinger/quipper/'>Quipper</a>) and mathematical computing.</div>
             <div class='sub-head'>Publications</div> -->
-         <div class='this-inventory'>
+         <div id='this-inventory' class='this-grid'>
             <div class='publication'>
                <div class='publication-title'>Homotopical inverse diagrams in categories with attributes</div>
                <div class='publication-authors'>Krzysztof Kapulkin & Peter LeFanu Lumsdaine</div>
@@ -181,5 +183,25 @@
            $(this).contents().wrap('<a href="https://doi.org/'+link+'"></a>');
          });
       </script>
+<script>
+      var wrapper = document.getElementById("this-inventory");
+
+document.addEventListener("click", function (event) {
+  if (!event.target.matches(".toggle-list")) return;
+
+  // List view
+  event.preventDefault();
+  wrapper.classList.add("this-list");
+  wrapper.classList.remove("this-grid");
+});
+
+document.addEventListener("click", function (event) {
+  if (!event.target.matches(".toggle-grid")) return;
+
+  // List view
+  event.preventDefault();
+  wrapper.classList.add("this-grid");
+  wrapper.classList.remove("this-list");
+});</script>
    </footer>
 </html>
