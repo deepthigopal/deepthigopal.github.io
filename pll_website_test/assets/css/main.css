@@ -16,14 +16,20 @@ font-style: normal;
 
 @font-face {
 font-family: "Museo Sans";
+src: url(../webfonts/MuseoSans_500.otf) format("opentype"),
 src: url(../webfonts/MuseoSans_500-webfont.woff) format("woff"),
+src: url(../webfonts/MuseoSans_500-webfont.woff2) format("woff2"),
+url(../webfonts/MuseoSans_500-webfont.svg#filename) format("svg");
 font-weight: 500;
 font-style: normal;
 }
 
 @font-face {
 font-family: "Museo Sans";
+src: url(../webfonts/MuseoSans_500_Italic.otf) format("opentype"),
 src: url(../webfonts/MuseoSans_500_Italic-webfont.woff) format("woff"),
+src: url(../webfonts/MuseoSans_500_Italic-webfont.woff2) format("woff2"),
+url(../webfonts/MuseoSans_500_Italic-webfont.svg#filename) format("svg");
 font-weight: 500;
 font-style: italic;
 }
@@ -159,7 +165,8 @@ body {
     color: #14281d;
     margin: 0;
     padding: 0;
-    font-family: "Museo Sans", sans-serif;
+    font-family: "Museo Sans", "Montserrat", sans-serif;
+    font-weight: 500;
     font-size: 2rem;
     min-height: 100vh;
     width: 100vw;
@@ -197,10 +204,12 @@ html {
   margin-right:-2vh;
 }
 
-/* Publication styling. */
+/*
+Publication styling.
+*/
 
 .this-inventory {
-    padding: 5vh;
+    padding: 0vh;
     font-size: 12pt;
     border-bottom: 2px solid #14281d;
 }
@@ -209,13 +218,14 @@ html {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
-  grid-gap: 1rem;
-  row-gap: 4ch;
+  grid-gap: 0rem;
+  row-gap: 0rem;
   overflow-y: hidden;
 }
 
 .publication{
-  padding:1vh;
+  padding:3vh;
+  border-right: 1px dotted #acc3b9;
   -moz-transition: all 1s ease-in;
   -webkit-transition: all 1s ease-in;
   -o-transition: all 1s ease-in;
@@ -228,20 +238,25 @@ html {
 
 .publication-title{
   font-size:12pt;
+  padding-bottom:3pt;
 }
 
 .publication-authors{
   font-size:12pt;
   font-family: 'Goudy Bookletter 1911';
+  line-height: 12pt;
+  padding-bottom:4pt;
 }
 
 .publication-status{
   font-size:10pt;
+  line-height: 11pt;
 }
 
 .publication-year{
   font-size:10pt;
   display: inline-block;
+  padding-bottom:4pt;
 }
 
 
