@@ -140,6 +140,12 @@ Sidebar
     cursor: pointer;
 }
 
+.sidebar hr{
+  border-top: 1px solid #14281d;
+  margin-left:-2vh;
+  margin-right:-2vh;
+}
+
 /*
 Body
 */
@@ -227,15 +233,11 @@ html {
     font-size: 1vw;
 }
 
-.sidebar hr{
-  border-top: 1px solid #14281d;
-  margin-left:-2vh;
-  margin-right:-2vh;
-}
-
 /*
 Publication styling.
 */
+
+/* Grid / list switchover */
 
 .this-grid {
   padding: 0vh;
@@ -267,7 +269,7 @@ Publication styling.
   -webkit-transition: all 1s ease-in-out;
   -o-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
-} 
+}
 
 .publication{
   padding:3vh;
@@ -278,6 +280,33 @@ Publication styling.
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
+
+.this-list .publication > * {
+  padding-left: 3%;
+  width: 75%;
+}
+
+.this-list .publication-supplementary {
+  width: 40%;
+}
+
+.grid-toggle{
+    padding-left: 3vh;
+    padding-top: 1vh;}
+
+.grid-toggle a{
+    color: #14281d;
+    transition: all 1.4s ease;
+}
+
+.grid-toggle a:hover {
+    transform: none;
+    cursor: pointer;
+    background: none;
+    color: #376d4f;
+}
+
+
 
 .publication:hover{
   background: #FCFEFC;
