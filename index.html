@@ -18,7 +18,7 @@
       </div>
     <main>
        <div class='profile-section'>
-          <button class='accordion'>+ Research interests</button>
+          <button class='accordion accordion-left'>+ Research interests</button>
           <div class='panel'>
              <p id='description'>I work on various phonological topics (the formation of active classes, the development of phonological rules, sonorant phonology, local and long-distance consonant interactions, the formal structure of phonological representations) and on mathematical models of language change and dialect geography. Uniting these, one of my major current directions is the relationship between geographically-sensitive variation in the structure of related phonological rules and the diachronic pathway of phonologisation. </p>
              <p id='description'>My PhD thesis, <i><a href='https://www.research.manchester.ac.uk/portal/en/theses/similarity-and-representations-in-sonorant-phonology(63464927-8f6b-414f-b343-d16328eb2911).html'>Similarity and representations in sonorant phonology</a></i> (December 2018) was supervised by <a href='https://ykimling.wordpress.com/'>Yuni Kim</a> and <a href='http://www.bermudez-otero.com/'>Ricardo Bermúdez-Otero</a>. The title was a little misleading; the thesis deals with the nature of class formation and phonologisation in synchrony and diachrony, and with the role that parameters like similarity can play in the organisation of processes of analogical generalisation. There's also a subsidiary focus therein on the Turkic languages, in which I have a particular interest. Any day now, I will definitely get around to publishing the individual chapters as papers, but in the meantime you're welcome to read the whole thing, or get in touch if you want to know more.</p>
@@ -26,7 +26,7 @@
           </div>
        </div>
        <div class='profile-section'>
-          <button class='accordion'>+ Publications</button>
+          <button class='accordion accordion-right'>+ Publications</button>
           <div class='panel'>
              <p id='description'>
              <div class='publication'>
@@ -65,14 +65,14 @@
           </div>
        </div>
        <div class='profile-section'>
-         <button class='accordion trigger-isotope'>+ Presentations</button>
+         <button class='accordion accordion-left trigger-isotope'>+ Presentations</button>
          <div class='panel'>
            <div class="button-group filters-button-group">
                  <a class="filter phonology" data-filter=".phonology">Phonology</a>
                  <a class="filter typology" data-filter=".typology">Typology & Dialectology</a>
                  <a class="filter talks" data-filter=".talks">Talks</a>
                  <a class="filter posters" data-filter=".posters">Posters</a>
-                 <a class="filter is-checked everything" data-filter=".everything">Everything</a>
+                 <a class="filter is-checked everything" data-filter=".everything">Show All</a>
                </div>
             <p id='description'></p>
             <div class='filterable'>
@@ -260,7 +260,7 @@
        </div>
      </div>
        <div class='profile-section'>
-          <button class='accordion'>+ Teaching</button>
+          <button class='accordion accordion-right'>+ Teaching</button>
           <div class='panel'>
              <p id='description'>
              <div class='teaching'>
@@ -419,7 +419,8 @@ $grid.on( 'layoutComplete', function() {
 
 
 <script>
-let btn = document.querySelector('.cool');
+// apply cool effect
+let btn = document.getElementById('content1');
  btn.addEventListener('mousemove', e => {
   let rect = document.getElementById('content1').getBoundingClientRect();
   let x = e.clientX - rect.left;
@@ -428,6 +429,7 @@ let btn = document.querySelector('.cool');
   btn.style.setProperty('--y', y + 'px');
 });
 
+// bigcontainer scales body content in the wide layout, but is a pain in the mobile layout
 $(function() {
     if($('body').width() < 600) {
         $('div').removeClass("bigcontainer");

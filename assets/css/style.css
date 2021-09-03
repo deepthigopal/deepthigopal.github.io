@@ -4,6 +4,9 @@
 #F5F1F9: magnolia
 #623CEA: majorelle blue */
 
+::-moz-selection { background: #623CEA; }
+::selection { background: #623CEA; }
+
 @font-face {
 font-family: "Junction";
 src: url(../webfonts/junction-regular.eot);
@@ -82,8 +85,15 @@ a:visited{
   font-weight: 700;
 }
 
+#footer1 a{
+  transition: all 0.5s ease;
+  display: inline-block;
+  transform-origin: left bottom;
+}
+
 a:hover{
   background-color:#F9E398;
+  transform: skewx(-10deg); }
 }
 
 mark{
@@ -92,6 +102,7 @@ mark{
 
 hr {
   border-top: 1px solid black;
+  margin: 2%;
 }
 
 .cool{
@@ -243,14 +254,30 @@ a {
   text-align: justify;
   outline: none;
   cursor:pointer;
+  transition: all 0.5s ease;
+  display: inline-block;
+  transform-origin: left bottom;
 }
 
-.accordion:hover {
+
+.accordion-left:hover {
     background-color: #EBE2F3;
+    transform: skewx(-10deg);
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.accordion-right:hover {
+    background-color: #EBE2F3;
+    transform: skewx(10deg);
+    border-left: 1px solid black;
+    border-right: 1px solid black;
 }
 
 .panel{
   display:block;
+  transition: opacity 1s;
+  transition: height 1s;
   border-top: 1px dashed #4C21E8;
   padding: var(--main-padding);
 }
@@ -269,7 +296,7 @@ text-align: right;
 }
 
 .presentation {
-  width:60vw;
+  width:80vw;
   display: grid;
   grid-template-columns: 30% 70%;
 }
@@ -285,10 +312,9 @@ text-align: right;
 
 #talktitle{
   margin-top:1.5%;
-  font-size: 0.8em;
+  font-size: 0.9em;
   font-style: italic;
   line-height: 1em;
-  margin-bottom: -0.5%;
 }
 
 #papertitle{
@@ -300,14 +326,15 @@ text-align: right;
 
 
 #authors{
-  font-size: 0.6em;
+  font-size: 0.8em;
   text-transform:uppercase;
   left: 0px;
   margin-bottom: -1vh;
 }
 
 #conference{
-    font-size: 0.7em;
+  margin-top:0.5%;
+    font-size: 0.8em;
     left: 0px;
     margin-bottom: 2%;
 }
@@ -340,7 +367,6 @@ text-align: right;
   margin-top:2%;
   font-size: 0.9em;
   line-height: 1em;
-  margin-bottom: -0.5%;
 }
 
 #role{
