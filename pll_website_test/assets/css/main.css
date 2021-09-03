@@ -274,16 +274,11 @@ Publication styling.
 .publication{
   padding:3vh;
   border-right: 1px dotted #acc3b9;
-  border-bottom: 1px dotted #acc3b9;
+  border-top: 1px dotted #acc3b9;
   -moz-transition: all 0.2s ease-in-out;
   -webkit-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-}
-
-.this-list .publication {
-  border-bottom: none;
-  border-top: 1px dotted #acc3b9;
 }
 
 .this-list .publication > * {
