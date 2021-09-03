@@ -16,8 +16,9 @@ font-style: normal;
 
 @font-face {
 font-family: "Museo Sans";
-src: url(../webfonts/MuseoSans_500.otf) format("otf"),
+src: url(../webfonts/MuseoSans_500.otf) format("opentype"),
 src: url(../webfonts/MuseoSans_500-webfont.woff) format("woff"),
+src: url(../webfonts/MuseoSans_500-webfont.woff2) format("woff2"),
 url(../webfonts/MuseoSans_500-webfont.svg#filename) format("svg");
 font-weight: 500;
 font-style: normal;
@@ -25,8 +26,9 @@ font-style: normal;
 
 @font-face {
 font-family: "Museo Sans";
-src: url(../webfonts/MuseoSans_500_Italic.otf) format("otf"),
+src: url(../webfonts/MuseoSans_500_Italic.otf) format("opentype"),
 src: url(../webfonts/MuseoSans_500_Italic-webfont.woff) format("woff"),
+src: url(../webfonts/MuseoSans_500_Italic-webfont.woff2) format("woff2"),
 url(../webfonts/MuseoSans_500_Italic-webfont.svg#filename) format("svg");
 font-weight: 500;
 font-style: italic;
