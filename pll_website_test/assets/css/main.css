@@ -108,6 +108,7 @@ Sidebar
 
 .sidebar a {
     color: #14281d;
+    transition: all 1.4s ease;
 }
 
 .sidebar a:hover {
@@ -127,6 +128,9 @@ Sidebar
 Body
 */
 
+::-moz-selection { background-color: #e58f65; color: #511730;}
+::selection { background-color: #e58f65; color: #511730; }
+
 .body-text {
     padding-top: 1.7vh;
     margin-left: 25vw;
@@ -141,6 +145,14 @@ Body
     text-transform: uppercase;
     border-top: 2px solid #14281d;
     border-bottom: 4px solid #14281d;
+    -moz-transition: all 0.7s ease-in;
+    -webkit-transition: all 1s ease-in;
+    -o-transition: all 1s ease-in;
+    transition: all 1s ease-in;
+}
+
+.main-head:hover {
+  background: #FCFEFC;
 }
 
 .body-text .sub-head {
@@ -188,9 +200,9 @@ a:focus, a:link, a:visited {
     text-decoration: none;
 }
 a:hover {
-    color: #3f2827;
+    color: #511730;
     text-decoration: none;
-    transform: skewx(10deg);
+    transform: skewx(5deg);
 }
 
 html {
@@ -226,10 +238,11 @@ Publication styling.
 .publication{
   padding:3vh;
   border-right: 1px dotted #acc3b9;
-  -moz-transition: all 1s ease-in;
-  -webkit-transition: all 1s ease-in;
-  -o-transition: all 1s ease-in;
-  transition: all 1s ease-in;
+  border-bottom: 1px dotted #acc3b9;
+  -moz-transition: all 0.7s ease-in;
+  -webkit-transition: all 0.7s ease-in;
+  -o-transition: all 0.7s ease-in;
+  transition: all 0.7s ease-in;
 }
 
 .publication:hover{
