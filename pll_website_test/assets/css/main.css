@@ -123,6 +123,17 @@ Sidebar
     color: #376d4f;
 }
 
+.sidebar .email a {
+    color: #14281d;
+}
+
+.sidebar .email a:hover {
+    transform: none;
+    cursor: pointer;
+    background: none;
+    color: #376d4f;
+}
+
 .sidebar .sidebar-selected {
     transform: translate(50px, 0);
     color:#376d4f;
@@ -244,10 +255,10 @@ Publication styling.
   padding:3vh;
   border-right: 1px dotted #acc3b9;
   border-bottom: 1px dotted #acc3b9;
-  -moz-transition: all 0.7s ease-in;
-  -webkit-transition: all 0.7s ease-in;
-  -o-transition: all 0.7s ease-in;
-  transition: all 0.7s ease-in;
+  -moz-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .publication:hover{

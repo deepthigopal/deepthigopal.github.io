@@ -254,7 +254,7 @@ a {
   text-align: justify;
   outline: none;
   cursor:pointer;
-  transition: all 0.5s ease;
+  transition: all 1s ease;
   display: inline-block;
   transform-origin: left bottom;
 }
