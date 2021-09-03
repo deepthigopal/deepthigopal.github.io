@@ -211,7 +211,7 @@ body {
 }
 
 a {
-    color: #e58f65;
+    color: #E16261;
     transition: all 0.5s ease;
     display: inline-block;
     transform-origin: left top;
@@ -219,7 +219,7 @@ a {
 }
 
 a:focus, a:link, a:visited {
-    color: #e58f65;
+    color: #E16261;
     text-decoration: none;
 }
 a:hover {
@@ -291,8 +291,9 @@ Publication styling.
 }
 
 .grid-toggle{
+  text-align: right;
     padding: 1vh;
-  padding-left: 3vh;}
+  padding-right: 3vh;}
 
 .grid-toggle a{
     color: #14281d;
