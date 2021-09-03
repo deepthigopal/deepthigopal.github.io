@@ -154,13 +154,15 @@ Body
 ::-moz-selection { background-color: #e58f65; color: #511730;}
 ::selection { background-color: #e58f65; color: #511730; }
 
-.body-text {
+.body-container {
     padding-top: 1.7vh;
+    padding-bottom: 1.7vh;
     margin-left: 25vw;
     font-size: 18px;
 }
 
-.body-text .main-head {
+.body-container .main-head {
+  background-color: #f1f9f3;
   font-family: "Roboto Mono", monospace;
   letter-spacing: -0.05em;
     padding: 2vh;
@@ -172,13 +174,20 @@ Body
     -webkit-transition: all 1s ease-in;
     -o-transition: all 1s ease-in;
     transition: all 1s ease-in;
+    z-index: 99;
+}
+
+#sticky-header {
+  position: fixed;
+  margin-top: 0;
+  width: 100%
 }
 
 .main-head:hover {
   background: #FCFEFC;
 }
 
-.body-text .sub-head {
+.body-container .sub-head {
   font-family: "Roboto Mono", monospace;
   letter-spacing: -0.05em;
     padding: 2vh;
@@ -244,7 +253,7 @@ Publication styling.
   padding: 0vh;
   font-size: 12pt;
   border-top: 2px solid #14281d;
-  border-bottom: 2px solid #14281d;
+  border-bottom: 4px solid #14281d;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
@@ -260,7 +269,7 @@ Publication styling.
 .this-list {
   padding: 0vh;
   font-size: 12pt;
-  border-bottom: 2px solid #14281d;
+  border-bottom: 4px solid #14281d;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
