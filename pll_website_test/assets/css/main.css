@@ -281,6 +281,11 @@ Publication styling.
   transition: all 0.2s ease-in-out;
 }
 
+.this-list .publication {
+  border-bottom: none;
+  border-top: 1px dotted #acc3b9;
+}
+
 .this-list .publication > * {
   padding-left: 3%;
   width: 75%;
@@ -291,8 +296,8 @@ Publication styling.
 }
 
 .grid-toggle{
-    padding-left: 3vh;
-    padding-top: 1vh;}
+    padding: 1vh;
+  padding-left: 3vh;}
 
 .grid-toggle a{
     color: #14281d;
