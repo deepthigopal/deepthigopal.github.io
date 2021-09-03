@@ -76,6 +76,11 @@ Sidebar
     padding-bottom: 1vh;
     font-size: 28pt;
     text-align: right;
+    transition: all 2s ease-in-out;
+}
+
+.sidebar .name:hover {
+    letter-spacing: 0.2em;
 }
 
 .sidebar .bottoms-up {
