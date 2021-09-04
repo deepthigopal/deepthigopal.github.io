@@ -36,6 +36,132 @@ font-style: italic;
 
 
 /*
+Body
+*/
+
+::-moz-selection { background-color: #e58f65; color: #511730;}
+::selection { background-color: #e58f65; color: #511730; }
+
+.body-container {
+    padding-top: 1.7vh;
+    padding-bottom: 1.7vh;
+    margin-left: 25vw;
+    font-size: 18px;
+}
+
+.body-container .main-head {
+  background-color: #f1f9f3;
+  font-family: "Roboto Mono", monospace;
+  letter-spacing: -0.05em;
+    padding: 2vh;
+    font-size: 24pt;
+    text-transform: uppercase;
+    border-top: 2px solid #14281d;
+    border-bottom: 4px solid #14281d;
+    -moz-transition: all 1s ease-in;
+    -webkit-transition: all 1s ease-in;
+    -o-transition: all 1s ease-in;
+    transition: all 1s ease-in;
+    z-index: 99;
+}
+
+#sticky-header {
+  position: fixed;
+  margin-top: 0;
+  width: 100%
+}
+
+.main-head:hover {
+  background: #FCFEFC;
+}
+
+.body-container .sub-head {
+  font-family: "Roboto Mono", monospace;
+  letter-spacing: -0.05em;
+    padding: 2vh;
+    font-size: 18pt;
+    text-transform: uppercase;
+    border-top: 2px solid #14281d;
+    border-bottom: 3px solid #14281d;
+}
+
+.this-blurb {
+    padding: 3vh;
+    padding-left: 5vw;
+    padding-right: 12vw;
+    font-size: 14pt;
+    border-bottom: 1px solid #14281d;
+    background: linear-gradient(#14281d, #14281d) no-repeat 2% 50%/2px 100%;
+    background: linear-gradient(#14281d, #14281d) no-repeat 90% 50%/2px 100%;
+}
+
+/* Anywhere that a lopsided two-column is needed */
+.body-panels {
+  padding: 0vh;
+  font-size: 12pt;
+  border-top: 2px solid #14281d;
+  border-bottom: 2px solid #14281d;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "body-panel-1 body-panel-1 body-panel-2";
+  grid-gap: 0rem;
+  row-gap: 0rem;
+  overflow-y: hidden;
+}
+
+
+.body-panel-1, .body-panel-2 {
+    font-size: 12pt;
+    border-right: 2px solid #14281d;
+    text-align: justify;
+}
+
+.body-panel-1{grid-area: body-panel-1; padding: 3vh;}
+.body-panel-2{grid-area: body-panel-2; padding:2vh;}
+
+body {
+    font-size: 1vw;
+    color: #14281d;
+    margin: 0;
+    padding: 0;
+    font-family: "Museo Sans", "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 2rem;
+    min-height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden
+}
+
+a {
+    color: #E16261;
+    transition: all 0.5s ease;
+    display: inline-block;
+    transform-origin: left top;
+    text-decoration: none;
+}
+
+a:focus, a:link, a:visited {
+    color: #E16261;
+    text-decoration: none;
+}
+a:hover {
+    color: #511730;
+    text-decoration: none;
+    transform: skewx(5deg);
+}
+
+html {
+    background-color: #f1f9f3;
+    font-size: 1vw;
+}
+
+
+
+/*
 Sidebar
 */
 
@@ -66,6 +192,8 @@ Sidebar
     display: block;
     cursor:pointer;
 }
+
+.sidebar-item a{display: block;}
 
 .sidebar .name {
   background: none;
@@ -119,7 +247,7 @@ Sidebar
 }
 
 .sidebar a:hover {
-    transform: translate(50px, 0);
+    transform: translate(20px, 0);
     cursor: pointer;
     background: none;
     color: #376d4f;
@@ -137,7 +265,7 @@ Sidebar
 }
 
 .sidebar .sidebar-selected {
-    transform: translate(50px, 0);
+    transform: translate(40px, 0);
     color:#376d4f;
     cursor: pointer;
 }
@@ -148,101 +276,7 @@ Sidebar
   margin-right:-2vh;
 }
 
-/*
-Body
-*/
 
-::-moz-selection { background-color: #e58f65; color: #511730;}
-::selection { background-color: #e58f65; color: #511730; }
-
-.body-container {
-    padding-top: 1.7vh;
-    padding-bottom: 1.7vh;
-    margin-left: 25vw;
-    font-size: 18px;
-}
-
-.body-container .main-head {
-  background-color: #f1f9f3;
-  font-family: "Roboto Mono", monospace;
-  letter-spacing: -0.05em;
-    padding: 2vh;
-    font-size: 24pt;
-    text-transform: uppercase;
-    border-top: 2px solid #14281d;
-    border-bottom: 4px solid #14281d;
-    -moz-transition: all 1s ease-in;
-    -webkit-transition: all 1s ease-in;
-    -o-transition: all 1s ease-in;
-    transition: all 1s ease-in;
-    z-index: 99;
-}
-
-#sticky-header {
-  position: fixed;
-  margin-top: 0;
-  width: 100%
-}
-
-.main-head:hover {
-  background: #FCFEFC;
-}
-
-.body-container .sub-head {
-  font-family: "Roboto Mono", monospace;
-  letter-spacing: -0.05em;
-    padding: 2vh;
-    font-size: 18pt;
-    text-transform: uppercase;
-    border-top: 2px solid #14281d;
-    border-bottom: 3px solid #14281d;
-}
-
-.body-misc {
-    padding: 1vh;
-    padding-left: 5vh;
-    font-size: 14pt;
-    border-bottom: 1px solid #14281d;
-}
-
-
-body {
-    font-size: 1vw;
-    color: #14281d;
-    margin: 0;
-    padding: 0;
-    font-family: "Museo Sans", "Montserrat", sans-serif;
-    font-weight: 500;
-    font-size: 2rem;
-    min-height: 100vh;
-    width: 100vw;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden
-}
-
-a {
-    color: #E16261;
-    transition: all 0.5s ease;
-    display: inline-block;
-    transform-origin: left top;
-    text-decoration: none;
-}
-
-a:focus, a:link, a:visited {
-    color: #E16261;
-    text-decoration: none;
-}
-a:hover {
-    color: #511730;
-    text-decoration: none;
-    transform: skewx(5deg);
-}
-
-html {
-    background-color: #f1f9f3;
-    font-size: 1vw;
-}
 
 /*
 Publication styling.
@@ -252,7 +286,7 @@ Publication styling.
 
 .this-grid {
   padding: 0vh;
-  font-size: 12pt;
+  font-size: 14pt;
   border-top: 2px solid #14281d;
   border-bottom: 4px solid #14281d;
   display: grid;
@@ -269,7 +303,7 @@ Publication styling.
 
 .this-list {
   padding: 0vh;
-  font-size: 12pt;
+  font-size: 14pt;
   border-bottom: 4px solid #14281d;
   display: grid;
   grid-template-columns: 1fr;
@@ -315,7 +349,7 @@ Grid toggle formatting
   display: inline-block;
   position: relative;
   text-align: right;
-  padding: 1vh;
+  padding: 2vh;
   transition: all 0.5s ease;
   padding-right: 3vh;
 }
@@ -377,33 +411,36 @@ Grid toggle formatting
     color: #376d4f;
 }
 
-
+/*
+Publication title formatting.
+*/
 
 .publication:hover{
   background: #FCFEFC;
 }
 
-.publication-title{
-  font-size:12pt;
-  padding-bottom:3pt;
-}
-
-.publication-title-noarxiv{
-  font-size:12pt;
+.publication-title, .publication-title-noarxiv{
+  font-size:16pt;
   padding-bottom:3pt;
 }
 
 .publication-authors{
-  font-size:12pt;
+  font-size:14pt;
   font-family: 'Goudy Bookletter 1911','Sorts Mill Goudy',serif;
   line-height: 12pt;
   padding-bottom:4pt;
 }
 
+.this-grid .publication-title, .this-grid .publication-title-noarxiv, .this-grid .publication-authors{font-size:12pt;}
+
 .publication-status{
-  font-size:10pt;
-  line-height: 11pt;
+  font-size:12pt;
+  line-height: 12pt;
 }
+
+.this-grid .publication-status{font-size:10pt;
+line-height: 11pt;}
+
 
 .publication-year{
   font-size:10pt;
