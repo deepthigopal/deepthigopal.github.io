@@ -113,6 +113,7 @@ Body
 
 
 .body-panel-1, .body-panel-2 {
+    min-height: 30vh;
     font-size: 12pt;
     border-right: 2px solid #14281d;
     text-align: justify;
