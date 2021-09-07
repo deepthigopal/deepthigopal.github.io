@@ -1,0 +1,14 @@
+\documentclass{standalone}
+
+\input{invdiags-preamble.tex}
+
+\begin{document}
+
+\(\begin{tikzcd}
+  u \ar[r,equal] \ar[d,zigzag,"u\e^{-1}"'] & u \ar[r,equal] \ar[d,zigzag,"u\e^{-1}"'] & u \ar[r,zigzag,"\eta_u"] \ar[d,zigzag,"u\e^{-1}"'] & uvu \ar[d,zigzag,"uvu\e^{-1}"] \ar[dl,phantom,"\scriptstyle \text{(nat)}"] \\
+  uvu \ar[r,equal] \ar[d,equal] & uvu \ar[r,equal] \ar[d,zigzag,"\eta^{-1}_u"'] & uvu \ar[r,zigzag,"\eta_{uvu}"] \ar[d,equal] & uvuvu \ar[d,equal] \\
+  uvu \ar[r,zigzag,"\eta^{-1}_u"] \ar[d,equal] & u \ar[r,zigzag,"\eta_u"] \ar[d,zigzag,"\eta_u"'] & uvu \ar[r,zigzag,"\eta_{uvu}"] \ar[d,zigzag,"\eta_{uvu}"] & uvuvu \ar[d,equal] \\
+  uvu \ar[r,equal] & uvu \ar[r,zigzag,"uv\eta_u"'] \ar[ur,phantom,"\scriptstyle \text{(nat)}"] & uvuvu \ar[r,equal] & uvuvu
+\end{tikzcd}\)
+
+\end{document}

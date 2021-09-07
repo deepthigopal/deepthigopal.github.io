@@ -421,26 +421,20 @@ Publication title formatting.
 }
 
 .publication-title, .publication-title-noarxiv{
-  font-size:16pt;
+  font-size:13pt;
   padding-bottom:3pt;
 }
 
 .publication-authors{
-  font-size:14pt;
+  font-size:11pt;
   font-family: 'Goudy Bookletter 1911','Sorts Mill Goudy',serif;
-  line-height: 12pt;
-  padding-bottom:4pt;
+  line-height: 10pt;
+  padding-bottom:3pt;
 }
-
-.this-grid .publication-title, .this-grid .publication-title-noarxiv, .this-grid .publication-authors{font-size:12pt;}
-
 .publication-status{
-  font-size:12pt;
-  line-height: 12pt;
+  font-size:10pt;
+  line-height: 11pt;
 }
-
-.this-grid .publication-status{font-size:10pt;
-line-height: 11pt;}
 
 
 .publication-year{

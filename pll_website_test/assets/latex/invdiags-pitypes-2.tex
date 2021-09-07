@@ -1,0 +1,69 @@
+\documentclass{standalone}
+
+\input{invdiags-preamble.tex}
+
+\begin{document}
+
+\(
+  \begin{tikzpicture}[cd-style,x={(2cm,0cm)},y={(0cm,2cm)},z={(2.5cm,-0.8cm)}]
+    % first block, pullback of the Ai’s
+    
+    \node(MiPi) at (0,0) {$M_i\Pi[A,B]$};
+    \node(Gi) at (3,0) {$\Gamma_i$};
+    \arr[fib] (MiPi) to (Gi);
+    \node(MiPiA) at (0,1) {$M_i(\Pi[A,B].A)$};
+    \arr[fibb] (MiPiA) to (MiPi);
+    \node(MiA) at (3,1) {$M_iA$};
+    \arr[fibb] (MiA) to (Gi);
+    \arr (MiPiA) to (MiA);
+    \node(MiPiAi) at (0,2) {$M_i\Pi[A,B]. A_{\yon{i}}$};
+    % fibration drawn later, to cross over
+    \node(GAi) at (3,2) {$(\Gamma.A)_i$};
+    \arr[fib] (GAi) to (MiA);
+    % horizontal arrow drawn later, to cross over
+
+    \node (MiAB) at (3,1,-1) {$M_i(A.B)$};
+    \arr[fibb] (MiAB) to (MiA);
+    \arr (MiPiA) to node {$M_i \ev_{A,B}$} (MiAB);
+
+    %% pullback of B_i:
+
+    \node (MiB) at (3,2,-1) {$M_iB$};
+    \arr[fibb] (MiB) to (GAi);
+    \arr (MiB) to (MiAB);
+    \arr (MiPiAi) to node {$f$} (MiB);
+    
+    % morally, belongs above
+    \arr[crossing over] (MiPiAi) to (GAi);
+
+    \node(MiPiAiB) at (0,3) {$M_i\Pi[A,B]. A_{\yon{i}}.f^*B_i$};
+    % fibration drawn later, to cross over
+    \node(GABi) at (3,3,-1) {$(\Gamma.A.B)_i$};
+    \arr[fib] (GABi) to (MiB);
+    \arr (MiPiAiB) to (GABi);
+
+    %% left-hand column, pullback of the central vertical axis
+    \node(GiL) at (-3,0) {$\Gamma_i$};
+    \arr (GiL) to node {$M_i(\lambda b)$} (MiPi);
+    \arr[bend right = 5] (GiL.-30) to node[auto=right] {$\id$} (Gi.210);
+    \node(MiAL) at (-3,1) {$M_iA$};
+    \arr[fibb] (MiAL) to (GiL);
+    \arr (MiAL) to node {$M_i((\lambda b).A)$} (MiPiA);
+    \node(GAiL) at (-3,2) {$(\Gamma.A)_i$};
+    \arr[fib] (GAiL) to (MiAL);
+    \arr (GAiL) to node {$M_i(\lambda b).A_{\yon{i}}$} (MiPiAi);
+    \node(GAiBL) at (-3,3) {$(\Gamma.A)_i . (M_i(\lambda b).A_{\yon{i}})^* f^* B_i$};
+    \arr[fib] (GAiBL) to (GAiL);
+    \arr (GAiBL) to (MiPiAiB);
+
+    % sections
+    \arr[dashed, bend left] (GAiL) to node {$s$} (GAiBL);
+    \arr[dashed, bend left, out = 5, in = 210] (GAiL) to node {$b_i$} (GABi);
+    \arr[bend left = 10] (MiAL) to node {$M_ib$} (MiAB);
+
+    % delated arrows, for crossing over
+    \arr[fib, crossing over] (MiPiAi) to (MiPiA);
+    \arr[fib, crossing over] (MiPiAiB) to (MiPiAi);
+  \end{tikzpicture} \)
+
+  \end{document}

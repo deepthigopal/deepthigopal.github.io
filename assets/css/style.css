@@ -262,14 +262,14 @@ a {
 
 .accordion-left:hover {
     background-color: #EBE2F3;
-    transform: skewx(-15deg);
+    transform: skewx(-10deg);
     border-left: 1px solid black;
     border-right: 1px solid black;
 }
 
 .accordion-right:hover {
     background-color: #EBE2F3;
-    transform: skewx(15deg);
+    transform: skewx(10deg);
     border-left: 1px solid black;
     border-right: 1px solid black;
 }

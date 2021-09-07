@@ -1,0 +1,366 @@
+
+%% Cut-down preamble + macros from PLL thesis, for standalone excerpted diagrams
+
+\usepackage[utf8]{inputenc}
+\usepackage{color}
+\usepackage{ifpdf}
+\usepackage{mathpartir}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage[all]{xy}
+\usepackage{wrapfig}
+\usepackage[unicode]{hyperref}
+\usepackage{stmaryrd}
+\usepackage{mathtools}
+\usepackage{doi}
+\usepackage{array}
+
+
+\xyoption{2cell}
+\xyoption{rotate}
+%\xyoption{curve}
+\UseTwocells
+\input{diagxy}
+
+
+%%%%
+% Binary relations, operators
+%%%%
+
+% \newcommand{\coslice}{\!\!\; \backslash \!\!\!\; \backslash}
+\newcommand{\coslice}{\!\!\; \backslash}
+\newcommand{\cotensor}{\pitchfork}
+\renewcommand{\equiv}{\simeq}
+\newcommand{\Iff}{\Leftrightarrow}
+\newcommand{\Imp}{\Rightarrow}
+\newcommand{\into}{\hookrightarrow}
+\newcommand{\iso}{\cong}
+\newcommand{\propeq}{\approx}
+\newcommand{\mono}{\to/ >->/}
+\newcommand{\slice}{\!\!\; / \!\!\!\; /}
+\newcommand{\tensor}{\otimes}
+\newcommand{\tightcdot}{\! \cdot \!}
+\newcommand{\tightcolon}{\!\!\, : \!\!\,}
+\newcommand{\To}{\Rightarrow}
+\newcommand{\types}{\vdash}
+
+%%%% 
+% Single styled characters (or almost single) and character-like symbols
+%%%%
+
+\newcommand{\Two}{\mathbf{2}}
+\newcommand{\A}{A_\bullet}
+\newcommand{\abar}{\overline{a}}
+\newcommand{\uA}{\underline{A}}
+\newcommand{\uAbu}{\underline{A}_\bullet}
+\newcommand{\B}{B_\bullet}
+% \newcommand{\ML}{\mathit{ML_I}}
+% \newcommand{\MLfrag}{\mathit{ML}^\Id}
+\renewcommand{\c}{\vec c}
+\newcommand{\C}{\mathcal{C}}
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\Cbf}{\mathcal{C}}
+\newcommand{\Cbu}{C_\bullet}
+\newcommand{\D}{\mathcal{D}}
+% \newcommand{\bC}{\mathbf{C}}
+% \newcommand{\Chat}{\widehat{\mathbb{C}}}
+% \newcommand{\D}{\mathbb{D}}
+% \newcommand{\bigD}{\mathcal{D}}
+% \newcommand{\bD}{\mathbf{D}}
+\newcommand{\diag}{\delta}
+% \renewcommand{\d}{\partial}
+\newcommand{\E}{\mathcal{E}}
+\newcommand{\Ebu}{\E_\bullet}
+\newcommand{\f}{\vec f}
+\newcommand{\fbf}{\mathbf{f}}
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\FF}{\mathbb{F}}
+\newcommand{\g}{\vec g}
+\newcommand{\gbf}{\mathbf{g}}
+\newcommand{\G}{\mathbb{G}}
+\newcommand{\h}{\vec h}
+\newcommand{\I}{\mathcal{I}}   % generating cofibrations.  mathscr is prettier,
+\newcommand{\J}{\mathcal{J}}   % but I find its I, J confusing.
+\newcommand{\K}{\mathcal{K}}    % A class of left maps
+\renewcommand{\L}{\mathcal{L}}    % A class of left maps
+\newcommand{\N}{\mathbb{N}}   % Natural numbers
+\newcommand{\NN}{\mathbb{N}}   % ditto
+\newcommand{\Ncal}{\mathcal{N}}   % Nerve
+% \renewcommand{\P}{P_{\MLfrag}}
+\newcommand{\PML}{P_{\MLId}}
+% \newcommand{\Pfull}{P_{\ML}}
+\newcommand{\PARA}{\textparagraph}
+\newcommand{\pow}{\mathcal{P}}
+\newcommand{\p}{\vec p}
+\newcommand{\SEC}{\textsection}
+\newcommand{\R}{\mathcal{R}}    % A class of right maps
+\renewcommand{\r}{\vec r}
+\renewcommand{\S}{\textsf{\textbf{S}}}    % Another generic type theory
+\newcommand{\T}{\textbf{\textsf{T}}}      % A generic type theory
+\newcommand{\Tcal}{\mathcal{T}}      % A 2-monad
+\newcommand{\TT}{\mathbb{T}}    % A generic type theory, seen as a categorical structure
+\newcommand{\Tsf}{\mathsf{T}}
+\newcommand{\tsf}{\mathsf{t}}
+\renewcommand{\u}{\vec u}
+\newcommand{\V}{\mathcal{V}}
+% \renewcommand{\v}{\vec v}
+\newcommand{\W}{\mathcal{W}}
+\newcommand{\WW}{\mathbb{W}}
+\newcommand{\w}{\vec w}
+\newcommand{\Xcal}{\mathcal{X}}
+\newcommand{\X}{X_\bullet}
+\newcommand{\Xbullet}{X_\bullet}
+\newcommand{\x}{\vec x}
+\newcommand{\uX}{\underline{X}}
+\newcommand{\uXbu}{\underline{X}_\bullet}
+\newcommand{\Ycal}{\mathcal{Y}}
+\newcommand{\Y}{Y_\bullet}
+\newcommand{\y}{\vec y}
+\newcommand{\yon}{\mathbf{y}}
+\newcommand{\z}{\vec z}
+
+%%%%
+% Styled words: general
+%%%%
+
+\newcommand{\Alg}[1]{#1\mbox{-}\mathbf{Alg}}
+\newcommand{\IntAlg}[2]{\mathbf{Alg}_{#2}(#1)}
+\newcommand{\AMS}{AMS}
+\newcommand{\AWFS}{AWFS}
+\newcommand{\Arr}{\mathrm{Arr}}
+\newcommand{\Cat}{\mathbf{Cat}}
+\newcommand{\intCat}[1][-]{\mathbf{Cat}(#1)}
+\newcommand{\enrCat}[1][\V]{#1\mbox{-}\mathbf{Cat}}
+\newcommand{\nCat}[1][n]{#1\mbox{-}\mathbf{Cat}}
+\newcommand{\cl}{\mathcal{C}\! \ell}
+\newcommand{\clpi}{{}^\Pi \cl}
+\newcommand{\ClovFib}{\mathbf{ClovFib}}
+\newcommand{\Coll}{\mathbf{Coll}}
+\newcommand{\CwA}{\mathbf{CwA}}
+\newcommand{\CwAId}{\mathbf{CwA}^{\Id}}
+\newcommand{\CwF}{\mathbf{CwF}}
+\newcommand{\CwFId}{\mathbf{CwF}^{\Id}}
+\newcommand{\Cxt}{\mathrm{Cxt}}
+\newcommand{\cxl}{\mathit{cxl}}
+\newcommand{\CofCosps}{\mathbf{CofCosps}}
+\newcommand{\cod}{\mathrm{cod}}
+\newcommand{\cof}{\mathit{cof}}
+\newcommand{\colim}{\varinjlim}
+\newcommand{\del}{\partial}
+\newcommand{\dom}{\mathrm{dom}}
+\newcommand{\DTT}{\mathbf{DTT}}
+\newcommand{\End}{\mathrm{End}}
+% \newcommand{\ev}{\mathbf{ev}}
+\newcommand{\Fib}{\mathbf{Fib}}
+\newcommand{\FibSpans}{\mathbf{FibSpans}}
+\newcommand{\FSCC}{\mathbf{FSCC}}
+\newcommand{\fscc}{\textsc{fscc}}
+\newcommand{\fsccs}{\textsc{fscc}'s}
+\newcommand{\FSCS}{\mathbf{FSCS}}
+\newcommand{\fscs}{\textsc{fscs}}
+\newcommand{\fscss}{\textsc{fscs}'s}
+\newcommand{\globe}[1][n]{\textsf{\textbf{G}}_{#1}}
+\newcommand{\piglobe}[1][n]{{}^\Pi \textsf{\textbf{G}}_{#1}}
+  % oh dear, I keep reading this as "pig lobe".  It's clearly too late at night…
+\newcommand{\globefig}[1]{\globe[#1]}
+  % needed because commands with optional[arguments] seem to interact badly with parsing of square brackets inside \bfig...\efig.
+\newcommand{\globes}{\textsf{\textbf{G}}_\bullet}
+\newcommand{\piglobes}{{}^\Pi \textsf{\textbf{G}}_\bullet}
+\newcommand{\maybepiglobes}{{}^{(\Pi)} \textsf{\textbf{G}}_\bullet}
+% \newcommand{\longGSets}{[\mathbb{G}^\op,\mathbf{Sets}]}
+\newcommand{\GSets}{\widehat{\mathbb{G}}}
+\newcommand{\GnSets}[1][n]{\widehat{\mathbb{G}}_{#1}}
+\newcommand{\Hom}{\mathrm{Hom}}
+\renewcommand{\lim}{\varprojlim}
+\newcommand{\Lan}{\mathrm{Lan}}
+\newcommand{\lax}{\mathrm{lax}}
+\newcommand{\Mon}{\mathbf{Mon}}
+\newcommand{\MonGlobCat}{\mathbf{MonGlobCat}}
+\newcommand{\ML}{\textsf{\textbf{ML}}}
+\newcommand{\MLId}{\textsf{\textbf{ML}}^{\Id}}
+\newcommand{\ob}{\operatorname{ob}}
+\newcommand{\op}{\mathrm{op}}
+\newcommand{\nOpd}[1][n]{#1\mbox{-}\mathbf{Opd}}
+% \newcommand{\Operads}{\mathbf{Operads}}
+\newcommand{\pd}{\mathbf{pd}}
+\newcommand{\pathpd}{\mathit{path}}
+\newcommand{\PsAlg}[2][]{\mathbf{Ps}_{#1}\mbox{-}{#2}\mbox{-}\mathbf{Alg}}
+\newcommand{\QCat}{\mathbf{QCat}}
+\newcommand{\qcat}{\mathit{qcat}}
+\newcommand{\Ran}{\mathrm{Ran}}
+% \newcommand{\RefGlob}[1][]{\mathbf{RefGlob}_{#1}}
+% \newcommand{\RefOneGlob}[1][]{\mathbf{Ref}_1\mathbf{Glob}_{#1}}
+\newcommand{\RefnGlob}[2]{\mathbf{Ref}_{#1}\mathbf{Glob}(#2)}
+\newcommand{\Sets}{\mathbf{Sets}}
+\newcommand{\Spans}[1][]{\mathbf{Spans}(#1)}
+\newcommand{\Spansplain}{\mathbf{Spans}}
+\newcommand{\str}{\mathrm{str}}
+\newcommand{\strat}{\textrm{strat}}
+\newcommand{\pdfDTT}{\texorpdfstring{$\DTT$}{DTT}}
+\newcommand{\pdfeta}{\texorpdfstring{$\eta$}{η}}
+\newcommand{\pdfId}{\texorpdfstring{$\Id$}{Id}}
+\newcommand{\pdfJbar}{\texorpdfstring{$\Jbar$}{J-bar}}
+\newcommand{\pdfPi}{\texorpdfstring{$\Pi$}{Π}}
+\newcommand{\pdfomega}{\texorpdfstring{$\omega$}{ω}}
+\renewcommand{\th}{\mathbf{th}}
+\newcommand{\Th}{\mathbf{Th}}
+\newcommand{\ThId}{\mathbf{Th}^{\Id}}
+\newcommand{\ThIdPi}{\mathbf{Th}^{\Id,\Pi}}
+\newcommand{\Tm}{\mathrm{Tm}}
+\newcommand{\tm}{\textrm{tm}}
+\newcommand{\Top}{\mathbf{Top}}
+\newcommand{\Ty}{\mathrm{Ty}}
+\newcommand{\ty}{\textrm{ty}}
+\newcommand{\strMonGlobCat}{\mathbf{MonGlobCat}}
+\newcommand{\strwCat}{\mathbf{str}\mbox{-}\omega\mbox{-}\mathbf{Cat}}
+\newcommand{\strnCat}[1][n]{\mathbf{str}\mbox{-}#1\mbox{-}\mathbf{Cat}}
+\newcommand{\SynPres}{\mathbf{SynPres}}
+\newcommand{\SynThy}{\mathbf{SynThy}}
+\newcommand{\wkwCat}{\mathbf{wk}\mbox{-}\omega\mbox{-}\mathbf{Cat}}
+\newcommand{\wkwGpd}{\mathbf{wk}\mbox{-}\omega\mbox{-}\mathbf{Gpd}}
+\newcommand{\wknCat}[1][n]{\mathbf{wk}\mbox{-}#1\mbox{-}\mathbf{Cat}}
+
+
+%%%%
+% Styled words: type theory syntax
+%%%%
+
+\newcommand{\app}{\textsc{app}}
+\newcommand{\apprule}{\textsc{app}}
+\newcommand{\Bool}{\mathsf{Bool}}
+\newcommand{\cellrule}{\mathsf{cell}}
+\newcommand{\comp}{\textsc{comp}}
+\newcommand{\CONG}{\textsc{cong}}
+\newcommand{\contr}{\textsc{contr}}
+\newcommand{\cons}{\textsc{cons}}
+\newcommand{\Cterm}{\mathsf{C}}
+\newcommand{\cterm}{\mathsf{c}}
+\newcommand{\cxt}{\mathsf{cxt}}
+\newcommand{\cxtmap}{\mathsf{cxtmap}}
+\newcommand{\cxtrule}{\cxt}
+\newcommand{\defrule}{\textsc{def}}
+\newcommand{\exch}{\textsc{exch}}
+\newcommand{\elim}{\textsc{elim}}
+\newcommand{\empt}{\textsc{empty}}
+\newcommand{\extrule}{\textsc{ext}}
+\newcommand{\extterm}{\mathsf{ext}}
+\newcommand{\form}{\textsc{form}}
+\newcommand{\Id}{\mathsf{Id}}
+% \newcommand{\varidelim}[5]{#4\mathsf{ for }#3\mathsf{ in }#1.#2\mathsf{ via }#5}
+% \newcommand{\idelim}[5]{J_{#1.#2}(#3,#4,#5)}
+\newcommand{\Jterm}{\mathsf{J}}
+\newcommand{\Jbar}{\overline{J}}
+\newcommand{\Kbar}{\overline{K}}
+\newcommand{\Jbarrule}{\overline{J}\mbox{-}2\mbox{-}\textsc{o}}
+\newcommand{\Jbarterm}{\overline{\mathsf{J}}}
+\newcommand{\Kterm}{\mathsf{K}}
+\newcommand{\LF}{\mathrm{LF}}
+\newcommand{\Lterm}{\mathsf{L}}
+\newcommand{\Lang}{\textbf{\textsf{Lang}}}
+\newcommand{\intro}{\textsc{intro}}
+\newcommand{\PiIdelim}{{\Pi\mbox{-}\Id\mbox{-}\elim}}
+\newcommand{\Piext}{{\Pi\mbox{-}\extrule}}
+\newcommand{\Piextapp}{{\Pi\mbox{-}\extrule\mbox{-}\apprule}}
+\newcommand{\PiIdcomp}{{\Pi\mbox{-}\Id\mbox{-}\comp}}
+\newcommand{\Nat}{\mathsf{Nat}}
+\newcommand{\One}{\mathsf{1}}
+\newcommand{\prop}{\textsc{prop}}
+\newcommand{\refl}{\textsc{refl}}
+\newcommand{\sourcerule}{\mathsf{src}}
+\newcommand{\subst}{\textsc{subst}}
+\newcommand{\substterm}{\mathsf{subst}}
+\newcommand{\src}{\mathsf{src}}
+\newcommand{\Sterm}{\mathsf{S}}
+\newcommand{\sterm}{\mathsf{s}}
+% \newcommand{\scterm}{\textsc{term}}
+\newcommand{\sym}{\textsc{sym}}
+\newcommand{\targetrule}{\mathsf{tgt}}
+\newcommand{\termrule}{\textsc{term}}
+\newcommand{\term}{\mathsf{term}}
+\newcommand{\tgt}{\mathsf{tgt}}
+\newcommand{\trans}{\textsc{trans}}
+\newcommand{\Tterm}{\mathsf{T}}
+\newcommand{\tterm}{\mathsf{t}}
+\newcommand{\type}{\mathsf{type}}
+\newcommand{\typerule}{\textsc{type}}
+% \newcommand{\sctype}{\textsc{type}}
+\newcommand{\wkg}{\textsc{wkg}}
+\newcommand{\var}{\textsc{var}}
+\newcommand{\Zero}{\mathsf{0}}
+
+%%%%
+% Other operators
+%%%%
+
+\newcommand{\Clw}{\mathbf{Cl}_\omega}
+\newcommand{\ClwQCat}{\mathbf{Cl}^\qcat_\omega}
+
+
+%%%%
+% Other symbols
+%%%%
+
+\newcommand{\lscott}{[\![}
+\newcommand{\rscott}{]\!]}
+
+
+%%%
+%%% Diagram annotations, work with diagxy
+%%%
+
+
+%\newdir{|>}{!/4.7pt/@{|}
+%        *:(1,-.2)\dir^{>}
+%        *:(1,+.2)@_{>}}
+
+\newdir{|>}{!/4.5pt/@{|}*:(1,-.2)@^{>}*:(1,+.2)@_{>}}
+       
+\newdir{ |>}{{}*!/-1pt/@{|}*!/-6pt/:(1,-.2)@^{>}*!/-6pt/:(1,+.2)@_{>}}
+
+\newbox\pbbox
+\setbox\pbbox=\hbox{\xy \POS(75,0)\ar@{-} (0,0) \ar@{-} (75,75)\endxy}
+\def\pb{\copy\pbbox}
+\newbox\urpbbox
+\setbox\urpbbox=\hbox{\xy \POS(0,0)\ar@{-} (75,0) \ar@{-} (0,75)\endxy}
+\def\urpb{\copy\urpbbox}
+\newbox\upbbox
+\setbox\upbbox=\hbox{\xy \POS(0,0)\ar@{-} (-40,40) \ar@{-} (40,40)\endxy}
+\def\upb{\copy\upbbox}
+\newbox\pobox
+\setbox\pobox=\hbox{\xy \POS(0,75)\ar@{-} (0,0) \ar@{-} (75,75) \endxy}
+\def\po{\copy\pobox}
+
+% \newbox\tiltvdashbox
+% \setbox\tiltvdashbox{\xy \POS( 
+
+%% typical usage:
+%
+% $$\bfig \square[A`B`C`D;```]
+% \place(100,400)[\pb]
+% \place(400,100)[\po]
+% \efig$$
+
+%%% unsorted:
+
+\newcommand{\CompCat}{\mathbf{CompCat}}
+
+\newcommand{\arr}{\mathrm{arr}}
+\newcommand{\ext}{\mathrm{ext}}
+% \newcommand{\Jbar}{\overline{J}}
+\newcommand{\tree}{\mathrm{tree}}
+\newcommand{\tr}{\mathrm{tr}}
+\newcommand{\stuff}{{\Phi}}
+% \makeindex
+
+
+
+
+%%% todo-type macros
+
+% \newcommand{\todo}[1]{\marginpar{\textcolor{red}{#1}}}
+\newcommand{\todo}[1]{}
+\newcommand{\oldtodo}[1]{\todo{#1}}
+% \newcommand{\padding}[1]{\textcolor{purple}{#1}}
+% \newcommand{\comment}[1]{\textcolor{blue}{#1}}
+\newcommand{\comment}[1]{}

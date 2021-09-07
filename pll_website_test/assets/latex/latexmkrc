@@ -1,0 +1,5 @@
+$pdf_mode = 1;
+@default_files = ('uvuvu-square',
+	'invdiags-pitypes-2',
+	'thesis-pylon-fullfigure',
+	'thesis-pylon-narrow');
