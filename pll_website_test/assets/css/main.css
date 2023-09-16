@@ -436,7 +436,6 @@ Publication title formatting.
   line-height: 11pt;
 }
 
-
 .publication-year{
   font-size:10pt;
   display: inline-block;
@@ -469,3 +468,26 @@ Publication title formatting.
   font-family: "Roboto Mono", monospace;
   font-size:8pt;
 }
+
+.talk-slides{
+  font-size:10pt;
+  font-family: "Roboto Mono", monospace;
+  font-weight: bold;
+}
+.talk-location{
+  font-size:11pt;
+  font-family: 'Goudy Bookletter 1911','Sorts Mill Goudy',serif;
+  line-height: 10pt;
+  padding-bottom:3pt;
+}
+
+.talk-date{
+  font-size:11pt;
+  font-family: 'Goudy Bookletter 1911','Sorts Mill Goudy',serif;
+  line-height: 10pt;
+  padding-bottom:3pt;
+}
+
+
+
+
