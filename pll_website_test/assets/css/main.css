@@ -111,6 +111,13 @@ Body
   overflow-y: hidden;
 }
 
+.body-running {
+  padding: 0vh;
+  font-size: 12pt;
+  border-top: 2px solid #14281d;
+  border-bottom: 2px solid #14281d;
+}
+
 
 .body-panel-1, .body-panel-2 {
     min-height: 30vh;
@@ -134,7 +141,7 @@ body {
     width: 100vw;
     margin: 0;
     padding: 0;
-    overflow-x: hidden
+    overflow-x: hidden;
 }
 
 a {
