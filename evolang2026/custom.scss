@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*-- scss:defaults --*/
+
+$presentation-font-size-root: 20px;
+$presentation-heading-font: "Crimson Text", serif !default;
+$font-family-sans-serif: "Roboto Condensed", sans-serif !default;
+
+/*-- scss:rules --*/
+
+.subtitle {
+	font-size: 150%;
+}
+
+  .reveal h3{
+    font-weight:normal;
+    font-style: italic;
+  }
+
+  .callout-custom  {
+    border-style: solid;
+    border-width: 1px;
+    padding: 2pt;
+    text-align: center;
+    width: 100%;
+    background-color: white;
+}
+
+.callout-alert  {
+  border-style: solid;
+  border-width: 1px;
+  padding: 2pt;
+  text-align: center;
+  width: 100%;
+  background-color: lightyellow;
+}
+
+.callout-theorem  {
+  border-style: solid;
+  border-width: 1px;
+  padding: 2pt;
+  text-align: center;
+  width: 100%;
+  background-color: lightblue;
+}
+
+.callout-tiny  {
+  border-style: solid;
+  border-width: 1px;
+  padding: 16pt;
+  text-align: center;
+  font-size: 70%;
+  width: 100%;
+}
+
+.callout-spacer {
+  border-style: none;
+  padding: 2pt;
+  text-align: center;
+  width: 100%;
+}
+
+.callout-bigspacer {
+  border-style: none;
+  padding: 2pt;
+	margin-top: 250px;
+  text-align: center;
+  width: 100%;
+}
+
+.sometransparency {
+	opacity: 0.9;
+}
+
+div.r-stack {
+	width: 100%;
+}
+
+div.r-stack p {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+
+img.fragment {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+.reveal aside * {
+  font-size: 12pt;
+  color: #666666;
+}
+
+
+
+
+// video {
+// 	float: left;
+// }
