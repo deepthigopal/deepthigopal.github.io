@@ -157,9 +157,9 @@ main {
 }
 
 #content1 {
-  border-top: 1px solid #000;
-  border-left: 1px solid #000;
-  border-bottom: 1px solid #000;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
   font-size: 14pt;
   grid-area: content1;
   background-color: #EBE2F3;
@@ -167,26 +167,26 @@ main {
 }
 
 #content2 {
-  border-top: 1px solid #000;
-  border-left: 1px solid #000;
-  border-bottom: 1px solid #000;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
   background-color: #F0EAF6;
   grid-area: content2;
   padding: var(--main-padding);
 }
 
 #content3 {
-  border-top: 1px solid #000;
-  border-left: 1px solid #000;
-  border-bottom: 1px solid #000;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
   border-right: 1px solid black;
   grid-area: content3;
   padding: var(--main-padding);
 }
 
 #footer1 {
-  border-top: 1px solid #000;
-  border-left: 1px solid #000;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
   grid-area: footer1;
   text-align: right;
   vertical-align: middle;
@@ -194,17 +194,17 @@ main {
 }
 
 #footer2 {
-  border-top: 1px solid #000;
-  border-left: 1px solid #000;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
   border-right: 1px solid black;
   grid-area: footer2;
   padding: var(--main-padding);
 }
 
 footer {
-  border-top: 1px solid #000;
-  border-left: 1px solid #000;
-  border-bottom: 1px solid #000;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
   border-right: 1px solid black;
   grid-area: footer;
   padding: 10px;
@@ -245,7 +245,7 @@ a {
   line-height: 1.2em;
   margin-top: -1px;
   margin-bottom: -1px;
-  border: 1px solid #000;
+  border: 1px solid black;
   padding: 1em;
   width: 100%;
   display:block;
@@ -254,7 +254,7 @@ a {
   text-align: justify;
   outline: none;
   cursor:pointer;
-  transition: all 1s ease;
+  transition: transform 1s ease, background-color 1s ease;
   display: inline-block;
   transform-origin: left bottom;
 }
