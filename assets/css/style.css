@@ -125,8 +125,8 @@ hr {
   height: 800px;
   background: radial-gradient(circle closest-side, #F9E398, transparent);
   transform: translate(-50%, -50%);
-  transition: opacity 2s ease;
-  -webkit-transition: opacity 2s;
+  transition: opacity 3s ease;
+  -webkit-transition: opacity 3s;
 }
 
 .cool:hover:before {
