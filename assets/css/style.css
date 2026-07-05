@@ -4,8 +4,8 @@
 #F5F1F9: magnolia
 #623CEA: majorelle blue */
 
-::-moz-selection { background: #623CEA; }
-::selection { background: #623CEA; }
+::-moz-selection { background: #623CEA; color: #F5F1F9;}
+::selection { background: #623CEA;  color: #F5F1F9;}
 
 @font-face {
 font-family: "Junction";
